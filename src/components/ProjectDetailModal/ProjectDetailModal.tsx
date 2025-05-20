@@ -22,15 +22,28 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Props) 
         </header>
         <section className="detail-meta">
           <p>
-            <strong>팀 구성:</strong> {project.team}
+            <strong>👩‍💻 팀 구성:</strong> {project.team}
           </p>
           <p>
-            <strong>기여도:</strong> {project.contribution}
+            <strong>🔍 기여도:</strong> {project.contribution}
           </p>
           <p>
-            <strong>Skills:</strong> {project.skills.join(", ")}
+            <strong>💻 Skills:</strong>
+            {project.skills.length > 0 && (
+              <p className="detail-skills">
+                {project.skills.map((s) => (
+                  <span
+                    key={s}
+                    className="detail-skill"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </p>
+            )}
           </p>
-          <div className="detail-links">
+          <p>
+            <strong>🔗 Links</strong>
             {project.links.map((l) => (
               <a
                 key={l.href}
@@ -41,9 +54,9 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Props) 
                 {l.label}
               </a>
             ))}
-          </div>
+          </p>
 
-          <>{project.description}</>
+          <div className="detail-description">{project.description}</div>
         </section>
       </Modal.Content>
     </Modal>
