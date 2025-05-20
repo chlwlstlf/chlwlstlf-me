@@ -1,12 +1,152 @@
 .about {
+  position: relative;
   text-align: center;
-  padding: 6rem 1rem;
+  padding: 6rem 1rem 4rem;
+  background: #fff;
+  overflow: hidden; /* 자식 요소가 섹션 밖으로 튀어나오지 않도록 */
 }
-.about h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+
+/* 섹션 전체를 덮도록 수정 */
+.wave-container {
+  position: absolute;
+  top: 0; /* 섹션 최상단 */
+  left: 0; /* 섹션 최좌측 */
+  width: 100%;
+  height: 100%; /* 섹션 높이만큼 */
+  pointer-events: none;
+  z-index: 0;
 }
-.about p {
-  font-size: 1.2rem;
-  color: #555;
+
+/* 공통 웨이브 설정 */
+.wave {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* 부드러운 왕복 애니메이션 */
+  animation: drift 6s ease-in-out infinite alternate;
+}
+
+/* 각 레이어별 크기/색/속도 */
+.wave--one {
+  width: 400px;
+  height: 400px;
+  background: rgba(10, 175, 255, 0.3);
+  top: -10%;
+  left: -5%;
+  animation-duration: 7s;
+}
+
+.wave--two {
+  width: 500px;
+  height: 500px;
+  background: rgba(206, 28, 28, 0.2);
+  bottom: -0%;
+  right: -30%;
+  animation-duration: 9s;
+}
+
+.wave--three {
+  width: 300px;
+  height: 300px;
+  background: rgba(10, 175, 255, 0.15);
+  bottom: 0%;
+  left: 30%;
+  animation-duration: 11s;
+}
+
+@keyframes drift {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+}
+
+/* 타이틀 & 메인 텍스트 */
+.title {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 0.5rem solid #aed3f7;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.main-title {
+  position: relative;
+  z-index: 1;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222;
+  min-height: 3rem;
+  margin-bottom: 2rem;
+}
+
+.blink {
+  display: inline-block;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 기본 인포 */
+.info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+  margin-bottom: 3rem;
+}
+.item {
+  font-size: 1.6rem;
+  color: #444;
+}
+
+/* 디테일 리스트 */
+.details {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+.details h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: #333;
+}
+.details ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+.details li {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+.details a {
+  color: #0066cc;
+  text-decoration: underline;
 }
