@@ -69,8 +69,8 @@
 .overlay-content {
   color: #fff;
   text-align: left;
-  max-width: 90%;
-  max-height: 90%;
+  width: 90%;
+  height: 90%;
   overflow-y: auto;
 }
 .overlay-content h3 {

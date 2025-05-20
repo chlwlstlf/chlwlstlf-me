@@ -10,11 +10,15 @@ export interface ProjectCardProps {
   team?: string;
   contribution?: string;
   links?: { label: string; href: string }[];
+  onClick?: () => void;
 }
 
-export default function ProjectCard({ thumbnail, title, subtitle, period, skills = [], team, contribution, links = [] }: ProjectCardProps) {
+export default function ProjectCard({ thumbnail, title, subtitle, period, skills = [], team, contribution, links = [], onClick }: ProjectCardProps) {
   return (
-    <div className="project-card">
+    <div
+      className="project-card"
+      onClick={onClick}
+    >
       {/* 썸네일 */}
       <img
         className="project-img"

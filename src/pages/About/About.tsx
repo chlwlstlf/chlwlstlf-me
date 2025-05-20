@@ -34,7 +34,7 @@ const About = () => {
         <div className="wave wave--three" />
       </div>
 
-      <span className="about-title">&lt;AboutMe /&gt;</span>
+      <h2 className="about-title">&lt;AboutMe /&gt;</h2>
       <h1 className="main-title">
         {text}
         <span className="blink">|</span>
@@ -63,7 +63,7 @@ const About = () => {
           </li>
         </ul>
 
-        <h2>주도적으로 UX를 개선합니다.</h2>
+        <h2>UX를 주도적으로 개선합니다.</h2>
         <ul>
           <li>
             직접 사용하며 불편을 느낀 순간마다 Figma에{" "}
