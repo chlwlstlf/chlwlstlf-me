@@ -1,5 +1,3 @@
-// src/pages/Stacks/Stacks.tsx
-import React from "react";
 import "./Stacks.css";
 
 import jsIcon from "../../assets/JavaScript.svg";
@@ -20,7 +18,7 @@ const TECH_STACK = [
   { icon: gitIcon, label: "GitHub" },
 ];
 
-export default function Stacks() {
+const Stacks = () => {
   return (
     <section
       id="stacks"
@@ -47,4 +45,6 @@ export default function Stacks() {
       </div>
     </section>
   );
-}
+};
+
+export default Stacks;

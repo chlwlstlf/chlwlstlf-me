@@ -1,18 +1,45 @@
-import React from "react";
 import "./Experience.css";
 
-const Experience: React.FC = () => (
-  <section
-    id="experience"
-    className="experience"
-  >
-    <h2>Experience</h2>
-    <ul>
-      <li>우아한테크코스 프론트엔드 6기 참여</li>
-      <li>코드 리뷰 매칭 서비스 개발</li>
-      <li>추가 경험 항목 작성</li>
-    </ul>
-  </section>
-);
+import sejong from "../../assets/sejong.png";
+import umc from "../../assets/umc.png";
+import woowacourse from "../../assets/woowacourse.png";
+
+const TECH_STACK = [
+  { icon: woowacourse, label: "우아한테크코스 6기 FE", period: "2024.02 ~ 2024.11" },
+  { icon: umc, label: "세종대 UMC 2기 Web", period: "2022.03 ~ 2022.08" },
+  { icon: sejong, label: "세종대학교 데이터사이언스학과", period: "2019.03 ~ 2024.02" },
+];
+
+const Experience = () => {
+  return (
+    <section
+      id="experience"
+      className="experience"
+    >
+      <h2 className="experience-title">&lt;Experience /&gt;</h2>
+
+      <div className="experience-card">
+        <div className="experience-grid">
+          {TECH_STACK.map(({ icon, label, period }) => (
+            <div
+              key={label}
+              className="experience-item"
+            >
+              <img
+                src={icon}
+                alt={label}
+                className="experience-icon"
+              />
+              <div className="experience-content">
+                <span className="experience-label">{label}</span>
+                <span className="experience-period">{period}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Experience;
