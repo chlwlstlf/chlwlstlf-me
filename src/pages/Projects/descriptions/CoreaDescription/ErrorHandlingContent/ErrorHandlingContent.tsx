@@ -2,6 +2,7 @@ import "./ErrorHandlingContent.css";
 import errorTypes from "../../../../../assets/error-type.png";
 import getError from "../../../../../assets/get-error.png";
 import restError from "../../../../../assets/rest-error.png";
+import authorizationError from "../../../../../assets/authorization-error.png";
 
 const ErrorHandlingContent = () => {
   return (
@@ -13,7 +14,39 @@ const ErrorHandlingContent = () => {
 
       <br></br>
 
-      <h3>[원인 분석 - 에러 종류 파악]</h3>
+      <h3>[해결방법]</h3>
+      <p>
+        <strong>1) 전역 에러 수집</strong>
+        <br></br>
+        Context API로 전역 에러를 수집하고, <code>queryClient</code>에 에러를 등록하면 <code>ErrorManager</code>가 실행되어 설정된 전략에 따라 적절한 UI를 노출합니다.
+      </p>
+      <p>
+        <strong>GET 요청</strong>
+        <br></br>
+        <img
+          src={getError}
+          alt="get 에러 흐름"
+          width="100%"
+        />
+      </p>
+      <br></br>
+      <p>
+        <strong>POST, PUT, DELETE 요청</strong>
+        <br></br>
+        <img
+          src={restError}
+          alt="나머지 에러 흐름"
+          width="100%"
+        />
+      </p>
+
+      <br></br>
+
+      <p>
+        <strong>2) CustomError로 주요 에러 처리</strong>
+        <br></br>
+        <code>Error</code> 클래스를 상속해 전략(strategy)과 HTTP 상태 코드를 포함하는 <code>CustomError</code>를 구현하고, 이를 기반으로 `AuthorizationError`, `NetworkError`, `ApiError` 등 주요 에러를 일관된 전략으로 처리했습니다.
+      </p>
       <img
         src={errorTypes}
         alt="에러 종류"
@@ -22,41 +55,20 @@ const ErrorHandlingContent = () => {
 
       <br></br>
 
-      <h3>[아키텍처 흐름]</h3>
       <p>
-        <strong>GET 요청</strong>
+        <strong>3) AuthorizationError 시 모달로 재로그인 유도</strong>
         <br></br>
-        <img
-          src={getError}
-          alt="get 에러 흐름"
-          width="70%"
-        />
-      </p>
-
-      <br></br>
-
-      <p>
-        <strong>POST, PUT, DELETE 요청</strong>
-        <br></br>
-        <img
-          src={restError}
-          alt="나머지 에러 흐름"
-          width="70%"
-        />
-      </p>
-
-      <br></br>
-
-      <h3>[해결방법]</h3>
-      <p>
-        1) <strong>CustomError 전략 패턴</strong> 도입 → Toast / Modal / Redirect / Fallback 역할 분리
-        <br></br>
-        2) <strong>AuthorizationError</strong> 발생 시 “자동 로그인 모달”로 처리
+        <strong>AuthorizationError</strong> 발생 시 “자동 로그인 모달”로 처리
         <code>onConfirm</code>: 재로그인, <code>onCancel</code>: 홈 이동
         <br></br>
-        3) <strong>TanStack Query networkMode</strong> +<strong> 네트워크 감지 훅</strong> 활용 → 오프라인 toast 안내, 온라인 복귀 시 자동 재시도
       </p>
+      <img
+        src={authorizationError}
+        alt="재로그인 유도 화면"
+        width="70%"
+      />
 
+      <br></br>
       <br></br>
 
       <h3>[성과]</h3>
