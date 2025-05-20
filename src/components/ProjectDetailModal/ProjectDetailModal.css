@@ -1,0 +1,48 @@
+.detail-modal-content {
+  width: 80vw;
+  max-width: 1000px;
+  height: 80vh;
+}
+.detail-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.detail-subtitle {
+  color: #555;
+  margin: 0.2rem 0;
+}
+.detail-period {
+  color: #888;
+  font-size: 1rem;
+}
+.detail-meta p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.6rem 0;
+  font-size: 1.4rem;
+}
+.detail-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+.detail-skill {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #9958a4;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #9958a4;
+}
+.detail-meta a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: rgb(57, 57, 57);
+  text-decoration: underline;
+  font-size: 1.4rem;
+}
+.detail-description {
+  margin-top: 30px;
+}

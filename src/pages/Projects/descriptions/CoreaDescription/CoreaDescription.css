@@ -1,0 +1,43 @@
+.detail-tabs {
+  font-family: sans-serif;
+}
+
+/* 공통 탭 버튼 */
+.tabs-nav button {
+  position: relative;
+  flex: 1;
+  padding: 8px 16px;
+  margin-right: -4px;
+  background: #92bde6;
+  color: #fff;
+  border: none;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  z-index: 1;
+  transition: background 0.2s;
+}
+
+.tabs-nav button:hover {
+  z-index: 2;
+  opacity: 0.8;
+}
+
+/* 활성 탭 */
+.tabs-nav button.active {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* 탭 콘텐츠 */
+.tab-content {
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+  padding: 16px;
+  background: #fff;
+}

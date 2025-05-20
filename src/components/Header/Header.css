@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  height: 3rem;
+  background: linear-gradient(to left, #ffa6a6, #7ec5ff);
+}
+
+.menu-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  background-color: white;
+  opacity: 0.3;
+  transition: opacity 0.2s, font-weight 0.2s;
+  font-size: clamp(1.2rem, 1rem + 0.5vw, 1.8rem);
+}
+
+.menu-item:hover {
+  opacity: 0.4;
+}
+
+.menu-item.active,
+.menu-item:focus {
+  opacity: 0.6;
+  font-weight: bold;
+}

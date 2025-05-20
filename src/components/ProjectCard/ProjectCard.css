@@ -1,0 +1,107 @@
+:root {
+  /* 카드 10% 확대 */
+  --card-scale: 1.5;
+}
+
+.project-card {
+  position: relative;
+  width: calc(300px * var(--card-scale));
+  height: calc(200px * var(--card-scale));
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: calc(1rem * var(--card-scale));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 기본 이미지 */
+.project-card .project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* 카드 하단에 제목만 */
+.project-card .project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem;
+  text-align: center;
+}
+.project-card .project-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+/* 오버레이 (처음에는 숨기기) */
+.project-card .project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* hover 시 오버레이 보여주기 & 이미지 블러+축소 */
+.project-card:hover .project-overlay,
+.project-card:focus-within .project-overlay {
+  opacity: 1;
+}
+.project-card:hover .project-img,
+.project-card:focus-within .project-img {
+  filter: blur(4px) brightness(0.6);
+  transform: scale(calc(var(--card-scale)));
+}
+
+/* 오버레이 콘텐츠 */
+.overlay-content {
+  color: #fff;
+  text-align: left;
+  width: 90%;
+  height: 90%;
+  overflow-y: auto;
+}
+.overlay-content h3 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+.overlay-content .subtitle {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #ddd;
+}
+.overlay-content p {
+  margin: 0.4rem 0;
+  font-size: 1.2rem;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+.skill {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.links a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #ffd;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
