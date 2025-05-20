@@ -116,11 +116,17 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem 2rem;
-  margin-bottom: 3rem;
 }
 .item {
   font-size: 1.6rem;
   color: #444;
+}
+.link {
+  font-size: 1.6rem;
+  color: #444;
+}
+.link:hover {
+  text-decoration: underline;
 }
 
 /* 디테일 리스트 */

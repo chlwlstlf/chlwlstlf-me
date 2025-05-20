@@ -62,7 +62,7 @@
 .project-card:hover .project-img,
 .project-card:focus-within .project-img {
   filter: blur(4px) brightness(0.6);
-  transform: scale(calc(var(--card-scale)));
+  transform: scale(1.05);
 }
 
 /* 오버레이 콘텐츠 */
@@ -98,7 +98,7 @@
   border-radius: 4px;
   font-size: 1rem;
 }
-.links a {
+.links > a {
   display: inline-block;
   margin-right: 0.5rem;
   color: #ffd;

@@ -1,4 +1,28 @@
-.contact p {
+.contact {
+  position: relative;
   text-align: center;
-  margin-top: 0.5rem;
+  padding: 6rem 1rem 4rem;
+}
+
+.contact-title {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 0.5rem solid #f7c3c6;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.contact-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contact-button {
+  border: 2px solid #ff7373;
+  padding: 1rem;
+  border-radius: 10px;
 }

@@ -36,7 +36,7 @@
   font-weight: 700;
   color: #9958a4;
 }
-.detail-meta a {
+.detail-meta > a {
   display: inline-block;
   margin-right: 0.5rem;
   color: rgb(57, 57, 57);

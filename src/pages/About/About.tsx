@@ -44,7 +44,32 @@ const About = () => {
         <div className="item">Name : 최진실</div>
         <div className="item">Birth : 2000.10.10</div>
         <div className="item">Edu : 세종대학교 데이터사이언스학과</div>
-        <div className="item">Email : chl378900@naver.com</div>
+      </div>
+
+      <div className="info">
+        <div className="item">
+          GitHub :{" "}
+          <a
+            className="link"
+            href="https://github.com/chlwlstlf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://github.com/chlwlstlf
+          </a>
+        </div>
+
+        <div className="item">
+          기술 블로그 :{" "}
+          <a
+            className="link"
+            href="https://github.com/chlwlstlf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://chlwlstlf.github.io
+          </a>
+        </div>
       </div>
 
       <div className="details">
@@ -63,6 +88,8 @@ const About = () => {
           </li>
         </ul>
 
+        <br></br>
+
         <h2>UX를 주도적으로 개선합니다.</h2>
         <ul>
           <li>
@@ -75,6 +102,7 @@ const About = () => {
             </button>
             를 남겼습니다.
           </li>
+
           <li>
             말로만 설명하기 어려운 부분은 빠르게 프로토타입으로 만들어{" "}
             <a
