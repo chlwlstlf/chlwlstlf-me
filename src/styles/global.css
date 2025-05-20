@@ -1,0 +1,92 @@
+/* 1. Reset & Box-sizing (기존 그대로) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. HTML5 요소 display reset */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 3. Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* rem 단위 기준 1rem = 10px */
+}
+
+/* 4. Body 기본 폰트 변경 */
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif; /* 원하시는 폰트로 교체 */
+  font-size: 1.6rem; /* 16px */
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* 5. Section: 헤더 제외한 최소 높이 보장 */
+section {
+  min-height: 100vh;
+  padding-top: 3rem;
+}
+
+/* 6. 목록/인용/테이블 초기화 (기존 그대로) */
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: none;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* 7. 버튼 & 링크 기본 스타일 */
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  color: inherit;
+  appearance: none;
+  outline: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 8. 스크롤바 커스터마이징 (WebKit) */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(198, 198, 198, 0.7);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(198, 198, 198, 0.2);
+}

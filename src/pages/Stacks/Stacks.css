@@ -1,0 +1,12 @@
+.stacks ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.stacks li {
+  background: #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+}
