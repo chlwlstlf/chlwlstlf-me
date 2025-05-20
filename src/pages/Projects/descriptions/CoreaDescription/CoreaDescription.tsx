@@ -3,6 +3,7 @@ import TokenRefreshContent from "./TokenRefreshContent/TokenRefreshContent";
 import BlurUIContent from "./BlurUIContent/BlurUIContent";
 import ErrorHandlingContent from "./ErrorHandlingContent/ErrorHandlingContent";
 import "./CoreaDescription.css";
+import NetworkErrorContent from "./NetworkErrorContent/NetworkErrorContent";
 
 const CoreaDescription = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -28,11 +29,18 @@ const CoreaDescription = () => {
         >
           3. 전역 에러 핸들링
         </button>
+        <button
+          className={activeTab === 3 ? "active" : ""}
+          onClick={() => setActiveTab(3)}
+        >
+          4. 네트워크 에러 잡기
+        </button>
       </nav>
       <div className="tab-content">
         {activeTab === 0 && <TokenRefreshContent />}
         {activeTab === 1 && <BlurUIContent />}
         {activeTab === 2 && <ErrorHandlingContent />}
+        {activeTab === 3 && <NetworkErrorContent />}
       </div>
     </div>
   );

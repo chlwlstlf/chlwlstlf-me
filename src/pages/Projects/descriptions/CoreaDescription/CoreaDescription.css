@@ -10,16 +10,11 @@
   margin-right: -4px;
   background: #92bde6;
   color: #fff;
-  border: none;
+  border: 1px solid #ddd;
   border-radius: 6px 6px 0 0;
   cursor: pointer;
   z-index: 1;
   transition: background 0.2s;
-}
-
-.tabs-nav button:hover {
-  z-index: 2;
-  opacity: 0.8;
 }
 
 /* 활성 탭 */

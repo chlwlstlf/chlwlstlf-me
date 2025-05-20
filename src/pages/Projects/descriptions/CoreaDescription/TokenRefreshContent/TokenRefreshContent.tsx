@@ -14,7 +14,7 @@ const TokenRefreshContent = () => {
       <img
         src={refreshToken1}
         alt="리프레시 토큰 이전 화면"
-        width="100%"
+        width="80%"
       />
 
       <br></br>
@@ -44,7 +44,7 @@ const TokenRefreshContent = () => {
       <img
         src={refreshToken2}
         alt="리프레시 토큰 이후 화면"
-        width="100%"
+        width="80%"
       />
     </div>
   );
