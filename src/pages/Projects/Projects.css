@@ -1,8 +1,24 @@
-.projects a {
-  margin-right: 1rem;
-  display: inline-block;
-  margin-top: 1rem;
+.projects {
+  position: relative;
+  text-align: center;
+  padding: 6rem 1rem 4rem;
+  background: #f9f9f9;
 }
-.projects h3 {
-  margin: 1rem 0 0.5rem;
+
+.projects-title {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 0.5rem solid #d2cbdf;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.projects-list {
+  display: flex;
+  gap: auto;
+  flex-wrap: wrap;
+  justify-content: center;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./About.css";
 import { useModal } from "../../hooks/useModal";
-import { ImageModal } from "./components/ImageModal";
+import { ImageModal } from "../../components/ImageModal.tsx/ImageModal";
 import blogImg from "../../assets/blog.png";
 import figmaCommentImg from "../../assets/figma-comments.png";
 
