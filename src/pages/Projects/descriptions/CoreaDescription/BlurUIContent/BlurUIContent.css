@@ -1,0 +1,49 @@
+/* TokenRefreshContent.css */
+.blur-ui-content {
+  display: block;
+  padding: 1.5rem;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-wrap; /* 텍스트 입력 줄바꿈 유지 + 자동 래핑 */
+  word-break: keep-all; /* 한국어 단어 깨짐 방지 */
+}
+
+/* 섹션 제목 */
+.blur-ui-content h3 {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.4rem;
+  color: #222;
+  border-left: 4px solid #5a9bd6;
+  padding-left: 0.75rem;
+}
+
+/* 기존 인라인 코드 설정 유지 */
+.blur-ui-content code {
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0 0.3em;
+  padding: 0.1em 0.4em;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ff5555;
+}
+
+/* 일반 문단 */
+.blur-ui-content p {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* 코드 블록(필요 시) */
+.blur-ui-content pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
