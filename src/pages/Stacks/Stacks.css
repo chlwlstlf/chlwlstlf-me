@@ -1,12 +1,52 @@
-.stacks ul {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
+.stacks {
+  position: relative;
+  text-align: center;
+  padding: 6rem 1rem 4rem;
+  background: #ebeff3;
 }
-.stacks li {
-  background: #e0e0e0;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
+
+.stacks-title {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 0.5rem solid #c0d0ec;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.stacks-card {
+  background: #fff;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stacks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.stacks-item {
+  text-align: center;
+}
+
+.stacks-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.stacks-label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
 }

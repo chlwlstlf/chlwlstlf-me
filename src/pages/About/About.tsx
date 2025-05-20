@@ -34,7 +34,7 @@ const About = () => {
         <div className="wave wave--three" />
       </div>
 
-      <span className="title">&lt;AboutMe /&gt;</span>
+      <span className="about-title">&lt;AboutMe /&gt;</span>
       <h1 className="main-title">
         {text}
         <span className="blink">|</span>

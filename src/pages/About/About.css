@@ -3,7 +3,6 @@
   text-align: center;
   padding: 6rem 1rem 4rem;
   background: #fff;
-  overflow: hidden; /* 자식 요소가 섹션 밖으로 튀어나오지 않도록 */
 }
 
 /* 섹션 전체를 덮도록 수정 */
@@ -73,7 +72,7 @@
 }
 
 /* 타이틀 & 메인 텍스트 */
-.title {
+.about-title {
   position: relative;
   z-index: 1;
   font-size: 3rem;
