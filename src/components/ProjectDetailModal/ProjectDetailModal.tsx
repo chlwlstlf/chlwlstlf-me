@@ -46,6 +46,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Props) 
             <strong>🔗 Links : </strong>
             {project.links.map((l) => (
               <a
+                className="detail-link"
                 key={l.href}
                 href={l.href}
                 target="_blank"

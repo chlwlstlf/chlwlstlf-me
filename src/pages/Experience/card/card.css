@@ -1,0 +1,56 @@
+.experience-card {
+  background: #fff;
+  min-width: 500px;
+  width: 40vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-items: center;
+  padding: 2rem;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+  min-height: 50px;
+}
+
+.experience-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.experience-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.experience-label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.experience-period {
+  display: block;
+  font-size: 1.4rem;
+  color: #7a7a7a;
+}

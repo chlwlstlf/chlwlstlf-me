@@ -3,6 +3,7 @@
   text-align: center;
   padding: 6rem 1rem 4rem;
   background: #fff;
+  overflow: hidden;
 }
 
 /* 섹션 전체를 덮도록 수정 */
