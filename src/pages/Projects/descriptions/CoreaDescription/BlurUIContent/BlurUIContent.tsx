@@ -1,7 +1,6 @@
 import "./BlurUIContent.css";
 import blurUI from "../../../../../assets/blur-ui.png";
 import github from "../../../../../assets/Github.svg";
-import jinsillogo from "../../../../../assets/jinsillogo.png";
 
 const BlurUIContent = () => {
   return (
