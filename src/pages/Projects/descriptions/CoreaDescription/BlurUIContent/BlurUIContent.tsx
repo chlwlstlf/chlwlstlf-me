@@ -53,7 +53,6 @@ const BlurUIContent = () => {
       </p>
 
       <br></br>
-      <br></br>
 
       <h3>[참고 링크]</h3>
       <div className="blur-ui-content__link">

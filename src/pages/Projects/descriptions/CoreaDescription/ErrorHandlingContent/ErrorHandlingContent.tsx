@@ -71,7 +71,6 @@ const ErrorHandlingContent = () => {
       />
 
       <br></br>
-      <br></br>
 
       <h3>[성과]</h3>
       <p>
