@@ -1,4 +1,4 @@
-const EtcContent = () => {
+const CoreaEtcContent = () => {
   return (
     <div className="corea-content">
       <h3>[방 생성 페이지]</h3>
@@ -24,4 +24,4 @@ const EtcContent = () => {
   );
 };
 
-export default EtcContent;
+export default CoreaEtcContent;

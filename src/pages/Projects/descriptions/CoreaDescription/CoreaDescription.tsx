@@ -4,8 +4,8 @@ import BlurUIContent from "./BlurUIContent/BlurUIContent";
 import ErrorHandlingContent from "./ErrorHandlingContent/ErrorHandlingContent";
 import "./CoreaDescription.css";
 import NetworkErrorContent from "./NetworkErrorContent/NetworkErrorContent";
-import EtcContent from "./EtcContent/EtcContent";
-import CoreaScreenContent from "./ScreenContent/CoreaScreenContent";
+import CoreaScreenContent from "./CoreaScreenContent/CoreaScreenContent";
+import CoreaEtcContent from "./CoreaEtcContent/CoreaEtcContent";
 
 const CoreaDescription = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -56,7 +56,7 @@ const CoreaDescription = () => {
         {activeTab === 2 && <BlurUIContent />}
         {activeTab === 3 && <ErrorHandlingContent />}
         {activeTab === 4 && <NetworkErrorContent />}
-        {activeTab === 5 && <EtcContent />}
+        {activeTab === 5 && <CoreaEtcContent />}
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import "./ConseatDescription.css";
 import DropdownContent from "./DropdownContent/DropdownContent";
 import ReviewPageContent from "./ReviewPageContent/ReviewPageContent";
 import SVGMapContent from "./SVGMapContent/SVGMapContent";
+import ConseatScreenContent from "./ConseatScreenContent/ConseatScreenContent";
+import ConseatEtcContent from "./ConseatEtcContent/ConseatEtcContent";
 
 const ConseatDescription = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -38,22 +40,15 @@ const ConseatDescription = () => {
           className={activeTab === 4 ? "active" : ""}
           onClick={() => setActiveTab(4)}
         >
-          4. 네트워크 에러 잡기
-        </button>
-        <button
-          className={activeTab === 5 ? "active" : ""}
-          onClick={() => setActiveTab(5)}
-        >
-          5. 그 외
+          4. 그 외
         </button>
       </nav>
       <div className="conseat-tab-content">
-        {activeTab === 0 && <></>}
+        {activeTab === 0 && <ConseatScreenContent />}
         {activeTab === 1 && <DropdownContent />}
         {activeTab === 2 && <ReviewPageContent />}
         {activeTab === 3 && <SVGMapContent />}
-        {activeTab === 4 && <></>}
-        {activeTab === 5 && <></>}
+        {activeTab === 4 && <ConseatEtcContent />}
       </div>
     </div>
   );
