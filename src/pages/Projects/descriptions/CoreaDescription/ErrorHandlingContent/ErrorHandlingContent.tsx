@@ -3,6 +3,8 @@ import errorTypes from "../../../../../assets/error-type.png";
 import getError from "../../../../../assets/get-error.png";
 import restError from "../../../../../assets/rest-error.png";
 import authorizationError from "../../../../../assets/authorization-error.png";
+import github from "../../../../../assets/Github.svg";
+import jinsillogo from "../../../../../assets/jinsillogo.png";
 
 const ErrorHandlingContent = () => {
   return (
@@ -79,6 +81,39 @@ const ErrorHandlingContent = () => {
         <br></br>
         이후 : 1️⃣ 모달의 로그인하기 버튼 클릭
       </p>
+
+      <br></br>
+      <br></br>
+
+      <h3>[참고 링크]</h3>
+      <div className="error-handling-content__link">
+        <img
+          src={github}
+          alt="깃허브 로고"
+          width="24px"
+        />
+        <a
+          href="https://github.com/woowacourse-teams/2024-corea/pull/814"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          [FE] Errorboundary 전략 세우기, Network에 따른 UI 변경(#813) #814
+        </a>
+      </div>
+      <div className="error-handling-content__link">
+        <img
+          src={jinsillogo}
+          alt="진블로그 로고"
+          width="24px"
+        />
+        <a
+          href="https://chlwlstlf.github.io/woowacourse/woowacourse-level5-errorboundary/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          [우테코] Level5 ErrorBoundary 전략 세우기
+        </a>
+      </div>
     </div>
   );
 };

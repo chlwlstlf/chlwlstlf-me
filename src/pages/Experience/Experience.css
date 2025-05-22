@@ -1,16 +1,15 @@
+.experience {
+  position: relative;
+  text-align: center;
+  background: #fbf4f7;
+}
+
 .experience ul {
   list-style: disc;
   padding-left: 1.5rem;
 }
 li {
   margin-bottom: 0.5rem;
-}
-
-.experience {
-  position: relative;
-  text-align: center;
-  padding: 6rem 1rem 4rem;
-  background: #fbf4f7;
 }
 
 .experience-title {

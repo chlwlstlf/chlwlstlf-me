@@ -4,8 +4,16 @@
   height: 80vh;
 }
 .detail-header {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1rem;
+}
+.detail-title {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 .detail-subtitle {
   color: #555;
@@ -14,6 +22,11 @@
 .detail-period {
   color: #888;
   font-size: 1rem;
+}
+
+/* detail meta */
+.detail-meta {
+  margin: 5rem 0;
 }
 .detail-meta p {
   display: flex;

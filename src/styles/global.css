@@ -40,7 +40,7 @@ body {
 /* 5. Section: 헤더 제외한 최소 높이 보장 */
 section {
   min-height: 100vh;
-  padding-top: 5rem;
+  padding: 10rem 2rem;
 }
 
 /* 6. 목록/인용/테이블 초기화 (기존 그대로) */

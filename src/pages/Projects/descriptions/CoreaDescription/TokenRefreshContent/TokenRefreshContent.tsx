@@ -1,6 +1,8 @@
 import "./TokenRefreshContent.css";
 import refreshToken1 from "../../../../../assets/refresh-token1.png";
 import refreshToken2 from "../../../../../assets/refresh-token2.png";
+import github from "../../../../../assets/Github.svg";
+import jinsillogo from "../../../../../assets/jinsillogo.png";
 
 const TokenRefreshContent = () => {
   return (
@@ -46,6 +48,39 @@ const TokenRefreshContent = () => {
         alt="리프레시 토큰 이후 화면"
         width="100%"
       />
+
+      <br></br>
+      <br></br>
+
+      <h3>[참고 링크]</h3>
+      <div className="token-refresh-content__link">
+        <img
+          src={github}
+          alt="깃허브 로고"
+          width="24px"
+        />
+        <a
+          href="https://github.com/woowacourse-teams/2024-corea/pull/239"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          [FE] 깃허브 로그인 추가(#150) #239
+        </a>
+      </div>
+      <div className="token-refresh-content__link">
+        <img
+          src={jinsillogo}
+          alt="진블로그 로고"
+          width="24px"
+        />
+        <a
+          href="https://chlwlstlf.github.io/woowacourse/woowacourse-level3-refresh-token/#%EC%B2%98%EC%9D%8C-%EC%9E%91%EC%84%B1%ED%96%88%EB%8D%98-%EC%9E%98%EB%AA%BB%EB%90%9C-%EC%BD%94%EB%93%9C"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          [우테코] Level3 Refresh Token
+        </a>
+      </div>
     </div>
   );
 };

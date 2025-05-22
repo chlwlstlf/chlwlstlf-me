@@ -88,7 +88,6 @@ const About = () => {
           </li>
         </ul>
 
-        <br></br>
 
         <h2>UX를 주도적으로 개선합니다.</h2>
         <ul>

@@ -1,7 +1,6 @@
 .about {
   position: relative;
   text-align: center;
-  padding: 6rem 1rem 4rem;
   background: #fff;
   overflow: hidden;
 }
@@ -135,7 +134,8 @@
   position: relative;
   z-index: 1;
   max-width: 800px;
-  margin: 100px auto;
+  margin: auto;
+  margin-top: 50px;
   text-align: left;
 }
 .details h2 {

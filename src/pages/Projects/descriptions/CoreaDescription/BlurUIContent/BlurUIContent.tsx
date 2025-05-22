@@ -1,5 +1,7 @@
 import "./BlurUIContent.css";
 import blurUI from "../../../../../assets/blur-ui.png";
+import github from "../../../../../assets/Github.svg";
+import jinsillogo from "../../../../../assets/jinsillogo.png";
 
 const BlurUIContent = () => {
   return (
@@ -13,7 +15,7 @@ const BlurUIContent = () => {
 
       <br></br>
 
-      <h3>[해결방법]</h3>
+      <h3>[기획 및 개발]</h3>
       <p>
         <strong>1. 피드백 작성 및 수정 계속 가능</strong>
         <br></br>
@@ -22,7 +24,7 @@ const BlurUIContent = () => {
       <p>
         <strong>2. 피드백 블러 처리</strong>
         <br></br>
-        피드백의 균형성을 확보하기 위해 상호 피드백 작성 후 열람 가능하도록 <strong>블러 처리 기능</strong>을 도입하였습니다. 이를 통해 일방적인 피드백 제공을 방지하고, 적극적인 피드백 교류를 촉진할 수 있도록 하였습니다.
+        <strong>피드백의 균형성을 확보</strong>하기 위해 상호 피드백 작성 후 열람 가능하도록 <strong>블러 처리 기능</strong>을 도입하였습니다. 이를 통해 일방적인 피드백 제공을 방지하고, 적극적인 피드백 교류를 촉진할 수 있도록 하였습니다.
       </p>
       <img
         src={blurUI}
@@ -37,18 +39,37 @@ const BlurUIContent = () => {
         • "피드백을 받지 못하는 문제"를 효과적으로 해결하며 사용자 만족도 향상시켰습니다.
         <br></br>• 사용자 스스로 피드백을 작성하도록 유도하였고, 마감 기한 이후 작성된 피드백이 <strong>총 69건 추가</strong>되었으며, 피드백 작성률이 7.5% 증가하였습니다.
         <br></br>
-        이전: 452건(49.8%)
+        이전 : 452건 (49.8%)
         <br></br>
-        이후: 521건(57.3%)
+        이후 : 521건 (57.3%)
       </p>
 
       <br></br>
 
       <h3>[배운점]</h3>
       <p>
-        • 사용자 피드백을 반영한 기능 개선이 서비스 경험에 미치는 긍정적 효과를 체감하였습니다.
+        • <strong>사용자 피드백을 반영</strong>한 기능 개선이 서비스 경험에 미치는 긍정적 효과를 체감하였습니다.
         <br></br>• 마감 기한 기반 서비스의 UX 유연성을 높이는 방법을 설계하고 적용하는 경험을 쌓았습니다.
       </p>
+
+      <br></br>
+      <br></br>
+
+      <h3>[참고 링크]</h3>
+      <div className="blur-ui-content__link">
+        <img
+          src={github}
+          alt="깃허브 로고"
+          width="24px"
+        />
+        <a
+          href="https://github.com/woowacourse-teams/2024-corea/pull/706"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          [FE] 피드백 미작성시 받은 피드백 안보이는 기능 추가(#703) #706
+        </a>
+      </div>
     </div>
   );
 };

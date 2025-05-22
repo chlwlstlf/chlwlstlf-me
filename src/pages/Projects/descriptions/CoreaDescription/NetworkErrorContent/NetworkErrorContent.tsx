@@ -1,4 +1,7 @@
 import "./NetworkErrorContent.css";
+// import networkDemo from "../../../../../assets/network-demo.gif"; // TODO 용량 큼
+import github from "../../../../../assets/Github.svg";
+import jinsillogo from "../../../../../assets/jinsillogo.png";
 
 const NetworkErrorContent = () => {
   return (
@@ -63,6 +66,50 @@ const NetworkErrorContent = () => {
           </tr>
         </tbody>
       </table>
+
+      <br></br>
+
+      <h3>[시연 영상]</h3>
+      <p>
+        {/* <img
+          src={networkDemo}
+          alt="네트워크 시연 영상"
+          width="100%"
+        /> */}
+      </p>
+
+      <br></br>
+      <br></br>
+
+      <h3>[참고 링크]</h3>
+      <div className="network-error-content__link">
+        <img
+          src={github}
+          alt="깃허브 로고"
+          width="24px"
+        />
+        <a
+          href="https://github.com/woowacourse-teams/2024-corea/pull/814"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          [FE] Errorboundary 전략 세우기, Network에 따른 UI 변경(#813) #814
+        </a>
+      </div>
+      <div className="network-error-content__link">
+        <img
+          src={jinsillogo}
+          alt="진블로그 로고"
+          width="24px"
+        />
+        <a
+          href="https://chlwlstlf.github.io/woowacourse/woowacourse-level5-network-error/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          [우테코] Level5 네트워크 에러 잡기
+        </a>
+      </div>
     </div>
   );
 };

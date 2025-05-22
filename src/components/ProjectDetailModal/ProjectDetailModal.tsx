@@ -10,17 +10,25 @@ interface Props {
   onClose: () => void;
 }
 
-export default function ProjectDetailModal({ project, isOpen, onClose }: Props) {
+const ProjectDetailModal = ({ project, isOpen, onClose }: Props) => {
   return (
     <Modal>
       <Modal.Overlay onClick={onClose} />
       <Modal.Content className="detail-modal-content">
         <header className="detail-header">
-          <h2>{project.title}</h2>
+          <h2 className="detail-title">
+            <img
+              src={project.logo}
+              alt="코레아 로고"
+              width="30px"
+            />
+            <span>{project.title}</span>
+          </h2>
           <p className="detail-subtitle">{project.subtitle}</p>
           <p className="detail-period">{project.period}</p>
         </header>
-        <section className="detail-meta">
+
+        <div className="detail-meta">
           <p>
             <strong>👩‍💻 팀 구성 :</strong> {project.team}
           </p>
@@ -58,8 +66,10 @@ export default function ProjectDetailModal({ project, isOpen, onClose }: Props) 
           </p>
 
           <div className="detail-description">{project.description}</div>
-        </section>
+        </div>
       </Modal.Content>
     </Modal>
   );
-}
+};
+
+export default ProjectDetailModal;
