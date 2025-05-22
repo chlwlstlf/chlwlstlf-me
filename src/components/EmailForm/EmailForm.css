@@ -1,0 +1,84 @@
+.email-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.email-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.email-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.email-label {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.email-input,
+.email-textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+
+.email-input:focus,
+.email-textarea:focus {
+  border-color: #2d2d2d;
+  outline: none;
+}
+
+.email-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.email-submit {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.email-submit:disabled {
+  background-color: #e0a4a4;
+  cursor: not-allowed;
+}
+
+.email-submit:not(:disabled):hover {
+  background-color: #e55a5a;
+}
+
+.email-success,
+.email-error {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.email-success {
+  color: #28a745;
+}
+
+.email-error {
+  color: #dc3545;
+}

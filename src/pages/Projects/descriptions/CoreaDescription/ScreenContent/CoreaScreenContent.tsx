@@ -29,7 +29,7 @@ const CoreaScreenContent = () => {
 
   return (
     <div className="corea-screen-content">
-      <p className="corea-screen-content_label">{COREA_IMAGES[imageIndex].label}</p>
+      <p className="corea-screen-content_label">[{COREA_IMAGES[imageIndex].label}]</p>
       <ImageSlide
         imageSrcArray={images}
         currentIndex={imageIndex}

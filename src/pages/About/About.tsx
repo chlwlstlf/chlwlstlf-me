@@ -41,12 +41,8 @@ const About = () => {
       </h1>
 
       <div className="info">
-        <div className="item">Name : 최진실</div>
-        <div className="item">Birth : 2000.10.10</div>
         <div className="item">Edu : 세종대학교 데이터사이언스학과</div>
-      </div>
 
-      <div className="info">
         <div className="item">
           GitHub :{" "}
           <a
@@ -87,7 +83,6 @@ const About = () => {
             을 제안하고 꾸준히 작성하면서, 실제로 동료들이 참고할 수 있는 지식 자산을 만들어가고 있습니다.
           </li>
         </ul>
-
 
         <h2>UX를 주도적으로 개선합니다.</h2>
         <ul>

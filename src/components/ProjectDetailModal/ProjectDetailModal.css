@@ -1,8 +1,9 @@
 .detail-modal-content {
-  width: 80vw;
-  max-width: 1000px;
-  height: 80vh;
+  width: 90vw;
+  height: 90vh;
+  padding: 5vh 10vw;
 }
+
 .detail-header {
   display: flex;
   flex-direction: column;

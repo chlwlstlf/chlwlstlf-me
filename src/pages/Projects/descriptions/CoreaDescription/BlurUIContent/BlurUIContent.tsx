@@ -29,7 +29,12 @@ const BlurUIContent = () => {
       <img
         src={blurUI}
         alt="블러 화면"
-        width="100%"
+        style={{
+          display: "block",
+          width: "100%",
+          maxWidth: "700px",
+          margin: "0 auto",
+        }}
       />
 
       <br></br>

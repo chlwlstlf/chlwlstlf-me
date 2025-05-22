@@ -30,10 +30,13 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: Props) => {
 
         <div className="detail-meta">
           <p>
-            <strong>👩‍💻 팀 구성 :</strong> {project.team}
+            <strong>💡 소개 :</strong> {project.introduction}
           </p>
           <p>
-            <strong>🔍 기여도 :</strong> {project.contribution}
+            <strong>🔥 사용자 수 :</strong> {project.users}
+          </p>
+          <p>
+            <strong>👩‍💻 팀 구성 :</strong> {project.team} | 기여도 : {project.contribution}
           </p>
           <p>
             <strong>💻 Skills :</strong>

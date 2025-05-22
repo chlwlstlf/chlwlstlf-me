@@ -1,3 +1,4 @@
+import EmailForm from "../../components/EmailForm/EmailForm";
 import "./Contact.css";
 
 const Contact = () => (
@@ -43,6 +44,8 @@ const Contact = () => (
     </div>
 
     <p className="contact-note">협업 문의나 프로젝트 제안은 언제든 환영합니다!</p>
+
+    <EmailForm />
   </section>
 );
 

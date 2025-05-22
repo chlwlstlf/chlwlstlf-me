@@ -11,7 +11,7 @@ const ErrorHandlingContent = () => {
     <div className="error-handling-content">
       <h3>[문제점]</h3>
       <p>
-        401 인증 오류 시 단순 alert 처리로 인해 사용자에게 재로그인 유도 흐름이 연결되지 않고 <strong>UX 단절</strong>이 발생했습니다.
+        401 인증 오류 시 단순 alert 처리로 인해 사용자가 직접 로그인 버튼을 클릭해야 하는 <strong>UX 단절</strong>이 발생했습니다.
       </p>
 
       <br></br>
@@ -20,7 +20,7 @@ const ErrorHandlingContent = () => {
       <p>
         <strong>1) 전역 에러 수집</strong>
         <br></br>
-        Context API로 전역 에러를 수집하고, <code>queryClient</code>에 에러를 등록하면 <code>ErrorManager</code>가 실행되어 설정된 전략에 따라 적절한 UI를 노출합니다.
+        Context API로 전역 에러를 수집하고, <code>queryClient</code>에 에러를 등록하면 <code>ErrorManager</code>가 트리거 되어 설정된 전략에 따라 적절한 UI를 노출합니다.
       </p>
       <p>
         <strong>GET 요청</strong>
@@ -28,7 +28,13 @@ const ErrorHandlingContent = () => {
         <img
           src={getError}
           alt="get 에러 흐름"
-          width="100%"
+          style={{
+            display: "block",
+            width: "100%",
+            maxWidth: "700px",
+            border: "1px solid #b7b7b7",
+            borderRadius: "15px",
+          }}
         />
       </p>
       <br></br>
@@ -38,7 +44,13 @@ const ErrorHandlingContent = () => {
         <img
           src={restError}
           alt="나머지 에러 흐름"
-          width="100%"
+          style={{
+            display: "block",
+            width: "100%",
+            maxWidth: "700px",
+            border: "1px solid #b7b7b7",
+            borderRadius: "15px",
+          }}
         />
       </p>
 
@@ -52,7 +64,13 @@ const ErrorHandlingContent = () => {
       <img
         src={errorTypes}
         alt="에러 종류"
-        width="70%"
+        style={{
+          display: "block",
+          width: "100%",
+          maxWidth: "700px",
+          border: "1px solid #b7b7b7",
+          borderRadius: "15px",
+        }}
       />
 
       <br></br>
@@ -71,6 +89,7 @@ const ErrorHandlingContent = () => {
       />
 
       <br></br>
+      <br></br>
 
       <h3>[성과]</h3>
       <p>
@@ -81,7 +100,6 @@ const ErrorHandlingContent = () => {
         이후 : 1️⃣ 모달의 로그인하기 버튼 클릭
       </p>
 
-      <br></br>
       <br></br>
 
       <h3>[참고 링크]</h3>
