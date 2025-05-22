@@ -1,4 +1,3 @@
-import React from "react";
 import useImageSlide from "../../../../../hooks/useImageSlide";
 import ImageSlide from "../../../../../components/ImageSlide/ImageSlide";
 import "./CoreaScreenContent.css";
@@ -36,7 +35,7 @@ const CoreaScreenContent = () => {
         onNext={handleClickNext}
         onPrev={handleClickPrev}
       />
-      <div className="imageNumber">
+      <div className="corea-screen-content_imageNumber">
         {imageIndex + 1}/{images.length}
       </div>
     </div>

@@ -1,4 +1,3 @@
-import "./ErrorHandlingContent.css";
 import errorTypes from "../../../../../assets/error-type.png";
 import getError from "../../../../../assets/get-error.png";
 import restError from "../../../../../assets/rest-error.png";
@@ -8,7 +7,7 @@ import jinsillogo from "../../../../../assets/jinsillogo.png";
 
 const ErrorHandlingContent = () => {
   return (
-    <div className="error-handling-content">
+    <div className="corea-content">
       <h3>[문제점]</h3>
       <p>
         401 인증 오류 시 단순 alert 처리로 인해 사용자가 직접 로그인 버튼을 클릭해야 하는 <strong>UX 단절</strong>이 발생했습니다.
@@ -103,7 +102,7 @@ const ErrorHandlingContent = () => {
       <br></br>
 
       <h3>[참고 링크]</h3>
-      <div className="error-handling-content__link">
+      <div className="corea-content__link">
         <img
           src={github}
           alt="깃허브 로고"
@@ -117,7 +116,7 @@ const ErrorHandlingContent = () => {
           [FE] Errorboundary 전략 세우기, Network에 따른 UI 변경(#813) #814
         </a>
       </div>
-      <div className="error-handling-content__link">
+      <div className="corea-content__link">
         <img
           src={jinsillogo}
           alt="진블로그 로고"

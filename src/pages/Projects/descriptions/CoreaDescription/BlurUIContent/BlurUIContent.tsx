@@ -1,10 +1,9 @@
-import "./BlurUIContent.css";
 import blurUI from "../../../../../assets/blur-ui.png";
 import github from "../../../../../assets/Github.svg";
 
 const BlurUIContent = () => {
   return (
-    <div className="blur-ui-content">
+    <div className="corea-content">
       <h3>[문제점]</h3>
       <p>
         기존 서비스는 <strong>코드 리뷰 마감일</strong> 이전까지만 피드백 작성 및 수정을 허용했으나, 다음과 같은 사용자 피드백이 있었습니다.
@@ -59,7 +58,7 @@ const BlurUIContent = () => {
       <br></br>
 
       <h3>[참고 링크]</h3>
-      <div className="blur-ui-content__link">
+      <div className="corea-content__link">
         <img
           src={github}
           alt="깃허브 로고"

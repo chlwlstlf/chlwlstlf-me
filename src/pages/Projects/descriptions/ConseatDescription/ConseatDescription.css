@@ -1,27 +1,27 @@
-.corea-detail-tabs {
+.conseat-detail-tabs {
   font-family: sans-serif;
 }
 
 /* 공통 탭 버튼 */
-.corea-tabs-nav button {
+.conseat-tabs-nav button {
   position: relative;
   flex: 1;
   padding: 8px 16px;
   margin-right: -4px;
-  background: #7cacd8;
-  color: #fff;
+  background: #00ffe5;
+  color: #000000;
   border: 1px solid #ddd;
   border-radius: 6px 6px 0 0;
   cursor: pointer;
   z-index: 1;
   transition: background 0.2s;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 /* 활성 탭 */
-.corea-tabs-nav button.active {
-  background: #fff;
-  color: #333;
+.conseat-tabs-nav button.active {
+  background: #000000;
+  color: #00ffe5;
   border: 1px solid #ddd;
   border-bottom: none;
   border-radius: 6px 6px 0 0;
@@ -32,15 +32,15 @@
 }
 
 /* 탭 콘텐츠 */
-.corea-tab-content {
+.conseat-tab-content {
   border: 1px solid #ddd;
   border-radius: 0 0 8px 8px;
   padding: 16px;
   background: #fff;
 }
 
-/* 공통 스타일을 corea-content 하나로 관리 */
-.corea-content {
+/* 공통 스타일을 conseat-content 하나로 관리 */
+.conseat-content {
   display: block;
   padding: 1.5rem;
   font-family: "Noto Sans KR", sans-serif;
@@ -51,16 +51,16 @@
 }
 
 /* 섹션 제목 */
-.corea-content h3 {
+.conseat-content h3 {
   margin: 1.5rem 0 0.75rem;
   font-size: 1.4rem;
   color: #222;
-  border-left: 4px solid #5a9bd6;
+  border-left: 4px solid #00ccb7;
   padding-left: 0.75rem;
 }
 
 /* 인라인 코드 */
-.corea-content code {
+.conseat-content code {
   display: inline-block;
   white-space: nowrap;
   margin: 0 0.3em;
@@ -74,25 +74,25 @@
 }
 
 /* 일반 문단 */
-.corea-content > p {
+.conseat-content > p {
   display: block;
   margin: 0.5rem 0;
   font-size: 1.3rem;
 }
 
 /* 링크 블록 */
-.corea-content__link {
+.conseat-content__link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-.corea-content__link a {
+.conseat-content__link a {
   color: #393939;
   font-size: 1.2rem;
 }
 
-.corea-content__link a:hover {
+.conseat-content__link a:hover {
   text-decoration: underline;
 }

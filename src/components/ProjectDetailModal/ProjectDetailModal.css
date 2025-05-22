@@ -22,14 +22,14 @@
 }
 .detail-period {
   color: #888;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 /* detail meta */
 .detail-meta {
   margin: 5rem 0;
 }
-.detail-meta p {
+.detail-meta > p {
   display: flex;
   align-items: center;
   gap: 1rem;

@@ -5,7 +5,7 @@ import jinsillogo from "../../../../../assets/jinsillogo.png";
 
 const NetworkErrorContent = () => {
   return (
-    <div className="network-error-content">
+    <div className="corea-content">
       <h3>[문제점]</h3>
       <p>저희 서비스는 오프라인일 때 이용할 수 있는 서비스가 없기 때문에 사용자의 빠른 네트워크 연결을 유도해야 합니다.</p>
 
@@ -82,7 +82,7 @@ const NetworkErrorContent = () => {
       <br></br>
 
       <h3>[참고 링크]</h3>
-      <div className="network-error-content__link">
+      <div className="corea-content__link">
         <img
           src={github}
           alt="깃허브 로고"
@@ -96,7 +96,7 @@ const NetworkErrorContent = () => {
           [FE] Errorboundary 전략 세우기, Network에 따른 UI 변경(#813) #814
         </a>
       </div>
-      <div className="network-error-content__link">
+      <div className="corea-content__link">
         <img
           src={jinsillogo}
           alt="진블로그 로고"

@@ -1,4 +1,3 @@
-import "./TokenRefreshContent.css";
 import refreshToken1 from "../../../../../assets/refresh-token1.png";
 import refreshToken2 from "../../../../../assets/refresh-token2.png";
 import github from "../../../../../assets/Github.svg";
@@ -6,7 +5,7 @@ import jinsillogo from "../../../../../assets/jinsillogo.png";
 
 const TokenRefreshContent = () => {
   return (
-    <div className="token-refresh-content">
+    <div className="corea-content">
       <h3>[문제점]</h3>
       <p>
         ※ 토큰 갱신 API 요청 함수에 <code>await new Promise((resolve) ={">"} setTimeout(resolve, 3000));</code> 코드를 추가하여 Race Condition 이슈가 없는지 확인해보았습니다.
@@ -62,7 +61,7 @@ const TokenRefreshContent = () => {
       <br></br>
 
       <h3>[참고 링크]</h3>
-      <div className="token-refresh-content__link">
+      <div className="corea-content__link">
         <img
           src={github}
           alt="깃허브 로고"
@@ -76,7 +75,7 @@ const TokenRefreshContent = () => {
           [FE] 깃허브 로그인 추가(#150) #239
         </a>
       </div>
-      <div className="token-refresh-content__link">
+      <div className="corea-content__link">
         <img
           src={jinsillogo}
           alt="진블로그 로고"

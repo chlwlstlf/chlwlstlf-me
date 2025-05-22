@@ -1,10 +1,6 @@
-import "./EtcContent.css";
-import github from "../../../../../assets/Github.svg";
-import jinsillogo from "../../../../../assets/jinsillogo.png";
-
 const EtcContent = () => {
   return (
-    <div className="network-error-content">
+    <div className="corea-content">
       <h3>[방 생성 페이지]</h3>
       <p>
         • 깃허브 저장소 링크 입력 시, <strong>5단계 유효성 검사</strong> 추가로 사용자 입력 오류 방지

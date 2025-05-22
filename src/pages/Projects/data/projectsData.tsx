@@ -3,7 +3,10 @@ import coreaLogo from "../../../assets/corea-logo.png";
 import coreaThumb from "../../../assets/corea-thumb.png";
 import CoreaDescription from "../descriptions/CoreaDescription/CoreaDescription";
 
+// CON:SEAT
+import conseatLogo from "../../../assets/conseat-logo.png";
 import conseatThumb from "../../../assets/conseat-thumb.png";
+import ConseatDescription from "../descriptions/ConseatDescription/ConseatDescription";
 export interface ProjectData {
   id: string;
   logo?: string;
@@ -48,7 +51,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     id: "conseat",
-    logo: coreaLogo,
+    logo: conseatLogo,
     thumbnail: conseatThumb,
     title: "콘시트 (CON:SEAT)",
     subtitle: "콘서트 자리별 시야 확인 서비스",
@@ -61,6 +64,6 @@ export const PROJECTS: ProjectData[] = [
       { label: "Demo", href: "https://concertseat.site" },
       { label: "GitHub", href: "https://github.com/ConSeat/frontend" },
     ],
-    description: <CoreaDescription />,
+    description: <ConseatDescription />,
   },
 ];
