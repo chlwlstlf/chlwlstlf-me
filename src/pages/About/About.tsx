@@ -98,7 +98,7 @@ const About = () => {
           </li>
 
           <li>
-            말로만 설명하기 어려운 부분은 빠르게 프로토타입으로 만들어{" "}
+            말로만 설명하기 어려운 부분은 <strong>빠르게</strong> 프로토타입으로 만들어{" "}
             <a
               className="link-button"
               href="https://github.com/ConSeat/frontend/pull/114"

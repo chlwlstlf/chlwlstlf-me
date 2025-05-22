@@ -12,7 +12,7 @@ const TokenRefreshContent = () => {
         <br></br>
         Access Token이 만료된 상태에서 여러 API 요청이 거의 동시에 발생할 때, 각각의 요청이 독립적으로 토큰 갱신 API를 호출하여 <strong>Race Condition</strong>이 일어나고, 불필요한 중복 요청이 발생
         <details>
-          <summary>리프레시 토큰 이전 화면 자세히 보기</summary>
+          <summary className="corea-content-details-summary">🚨 Race Condition 발생 예시 (동시 5건 요청 → 갱신 API 5회 호출)</summary>
           <img
             src={refreshToken1}
             alt="리프레시 토큰 이전 화면"
@@ -47,7 +47,7 @@ const TokenRefreshContent = () => {
         <br></br>
         3) 갱신 완료 후 <code>processQueue(null, newToken)</code> 호출로 대기 중인 요청들에 새 토큰을 전달하여 한꺼번에 재실행
         <details>
-          <summary>리프레시 토큰 이후 화면 자세히 보기</summary>
+          <summary className="corea-content-details-summary">🎉 Race Condition 해결 예시 (동시 5건 요청 → 갱신 API 1회 호출)</summary>
           <img
             src={refreshToken2}
             alt="리프레시 토큰 이후 화면"

@@ -109,3 +109,11 @@
 .corea-content__link a:hover {
   text-decoration: underline;
 }
+
+/* 토글 */
+.corea-content-details-summary {
+  cursor: pointer; /* 포인터 커서 */
+  color: #0070f3; /* 강조 색상 */
+  font-weight: 500;
+  transition: color 0.2s;
+}

@@ -10,16 +10,16 @@ const DropdownContent = () => {
     <div className="conseat-content">
       <h3>[문제점]</h3>
       <ul>
-        <li>피그마 디자인에 일반형 · 입력형 · 모달형 등 17가지가 넘는 다양한 드롭다운 UI</li>
-        <li>개별 구현 시 중복 코드·높은 유지보수 비용 발생</li>
+        <li>Figma에 일반형 · 입력형 · 모달형 등 17개가 넘는 다양한 드롭다운 UI</li>
+        <li>개별 구현 시 코드 중복 및 유지보수 비용 증가</li>
       </ul>
 
       <br></br>
 
       <h3>[해결방법]</h3>
       <ul>
-        <li>Compound Component 패턴: 핵심 로직과 스타일을 한 곳에 모아</li>
-        <li>Trigger·Menu·Item·Modal 옵션만 조합해 재사용할 수 있도록 설계</li>
+        <li>Compound Component 패턴으로 공통 로직·스타일 캡슐화</li>
+        <li>Trigger·Menu·Item·Modal 컴포넌트 조합으로 다양한 변형 지원</li>
       </ul>
 
       <p>

@@ -1,4 +1,5 @@
 import "./NetworkErrorContent.css";
+import networkDemo from "../../../../../assets/network-demo.webm";
 import github from "../../../../../assets/Github.svg";
 import jinsillogo from "../../../../../assets/jinsillogo.png";
 
@@ -61,6 +62,27 @@ const NetworkErrorContent = () => {
           </tr>
         </tbody>
       </table>
+
+      <br></br>
+
+      <h3>[시연 영상]</h3>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          display: "block",
+          width: "100%",
+          maxWidth: "900px",
+          margin: "0 auto",
+        }}
+      >
+        <source
+          src={networkDemo}
+          type="video/webm"
+        />
+      </video>
 
       <br></br>
 

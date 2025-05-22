@@ -32,7 +32,7 @@ const ConseatScreenContent = () => {
         <ImageSlide
           imageSrcArray={images}
           currentIndex={imageIndex}
-          height={400}
+          height={500}
           onNext={handleClickNext}
           onPrev={handleClickPrev}
         />

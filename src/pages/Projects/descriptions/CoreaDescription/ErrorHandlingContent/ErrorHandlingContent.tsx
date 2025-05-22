@@ -20,7 +20,7 @@ const ErrorHandlingContent = () => {
         <strong>1) 전역 에러 수집</strong>
         <ul>
           <li>
-            Context API로 에러를 모아 <code>queryClient</code>에 등록
+            Context API로 에러를 모아 <code>queryClient</code>의 <code>onError</code>에서 변경
           </li>
           <li>
             등록된 에러는 <code>ErrorManager</code>가 전략에 따라 UI를 노출
@@ -70,7 +70,7 @@ const ErrorHandlingContent = () => {
           <li>이를 기반으로 `AuthorizationError`, `NetworkError`, `ApiError` 등 주요 에러를 일관된 전략으로 처리</li>
         </ul>
         <details>
-          <summary>에러 분류 다이어그램</summary>
+          <summary className="corea-content-details-summary">🚦 에러 분류 매트릭스</summary>
           <img
             src={errorTypes}
             alt="에러 종류"
@@ -97,11 +97,14 @@ const ErrorHandlingContent = () => {
             <code>onConfirm</code>: 재로그인, <code>onCancel</code>: 홈 이동
           </li>
         </ul>
-        <img
-          src={authorizationError}
-          alt="재로그인 유도 화면"
-          width="70%"
-        />
+        <details>
+          <summary className="corea-content-details-summary">🔐 재로그인 유도 모달 화면</summary>
+          <img
+            src={authorizationError}
+            alt="재로그인 유도 화면"
+            width="70%"
+          />
+        </details>
       </p>
 
       <br></br>

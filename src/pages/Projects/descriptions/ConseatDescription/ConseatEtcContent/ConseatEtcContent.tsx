@@ -32,7 +32,7 @@ const ConseatEtcContent = () => {
       <h3>[로그인 & 세션 최적화]</h3>
       <ul>
         <li>Middleware로 비회원 접근 차단 → 비로그인 시 자동 리다이렉트</li>
-        <li>CSR 세션 호출 횟수 대폭 감소 (Promise 캐싱 + SSR 초기 주입)</li>
+        <li>CSR 세션 호출 횟수 대폭 감소 (Promise 캐싱 – TTL 5분 설정 + SSR 초기 주입)</li>
         <li>Public vs Secure API 분리로 불필요한 토큰 검증 제거</li>
       </ul>
 
@@ -45,6 +45,18 @@ const ConseatEtcContent = () => {
         </li>
         <li>
           <code>isStepElement</code> 타입 가드로 타입 안전성 확보
+        </li>
+      </ul>
+
+      <br />
+
+      <h3>[성능 최적화]</h3>
+      <ul>
+        <li>
+          <code>Link</code> 태그 prefetch 속성에 조건 추가 → <code>/home</code> 페이지의 <code>_rsc</code> 요청 5→2건 60% 절감
+        </li>
+        <li>
+          이미지 첫 요소에 <code>priority</code> 부여 → LCP 8.1s→3.0s 단축
         </li>
       </ul>
     </div>

@@ -36,14 +36,13 @@ const SVGMapContent = () => {
         <br />
         확대(scale)·이동(offset)을 기반으로 viewport 박스를 산출해 축소판에 렌더링 → 현재 보고 있는 영역을 실시간 시각화
         <details>
-          <summary>뷰포트 계산 로직 자세히 보기</summary>
+          <summary className="conseat-content-details-summary">📍 미니맵 뷰포트 계산 시각화</summary>
           <img
             src={minimap}
             alt="미니맵 뷰포트 계산 다이어그램"
             style={{
               width: "100%",
               maxWidth: 600,
-              margin: "auto",
               display: "block",
               border: "1px solid #b7b7b7",
               borderRadius: "15px",
@@ -52,7 +51,7 @@ const SVGMapContent = () => {
         </details>
       </p>
       <p>
-        <strong>5) 크로스 브라우저 호환 필터</strong>
+        <strong>5) 크로스 브라우저 호환</strong>
         <br />
         SVG 문자열 내 <code>&lt;defs&gt;</code> 필터(밝기+드롭섀도우) 주입 → iOS·Android·데스크톱 모두 동일한 밝기 효과 구현
       </p>

@@ -22,7 +22,7 @@ const ReviewPageContent = () => {
           <li>dropdown도 새로 마운트될 때 자동으로 열림 동작</li>
         </ul>
         <details>
-          <summary>자동 스크롤 시연 영상</summary>
+          <summary className="conseat-content-details-summary">🔄 자동 스크롤 시연 영상: 새 섹션 진입 시 포커스 이동</summary>
           <video
             src="https://github.com/user-attachments/assets/a1e3b760-8cbe-4530-8f73-cb0c8edc18f8"
             controls
@@ -42,7 +42,7 @@ const ReviewPageContent = () => {
           <li>사용자가 바로 입력을 이어갈 수 있게 개선</li>
         </ul>
         <details>
-          <summary>유효하지 않은 항목 시연 영상</summary>
+          <summary className="conseat-content-details-summary">⚠️ 유효성 실패 시 자동 이동 시연 영상</summary>
           <video
             src="https://github.com/user-attachments/assets/1f608aa7-2b56-4ab7-b223-60455584eafe"
             controls

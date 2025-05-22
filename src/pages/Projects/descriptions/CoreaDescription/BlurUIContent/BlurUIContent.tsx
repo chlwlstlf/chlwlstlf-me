@@ -30,7 +30,7 @@ const BlurUIContent = () => {
           <li>적극적인 피드백 교류 유도</li>
         </ul>
         <details>
-          <summary>블러처리 화면 보기</summary>
+          <summary className="corea-content-details-summary">🔒 피드백 미작성 시 블러 처리 UI 예시</summary>
           <img
             src={blurUI}
             alt="블러 화면"
