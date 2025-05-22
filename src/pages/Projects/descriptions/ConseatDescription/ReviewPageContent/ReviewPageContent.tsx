@@ -5,7 +5,10 @@ const ReviewPageContent = () => {
   return (
     <div className="conseat-content">
       <h3>[문제점]</h3>
-      <p>리뷰 작성은 7단계로 구성되어 있어, 페이지가 길어질수록 사용자가 입력 섹션을 찾기 위해 과도하게 스크롤하거나 클릭해야 했습니다.</p>
+      <ul>
+        <li>리뷰 작성은 7단계로 구성</li>
+        <li>페이지가 길어질수록 원하는 입력 섹션으로 이동하기 위해 과도한 스크롤·클릭이 필요함</li>
+      </ul>
 
       <br></br>
 
@@ -14,17 +17,20 @@ const ReviewPageContent = () => {
         <strong>1) 자동 스크롤</strong>
         <ul>
           <li>
-            <strong>useAutoScroll</strong> 커스텀 훅을 구현하여, 새로운 섹션이 마운트될 때 자동으로 해당 섹션으로 스크롤되도록 했습니다.
+            <strong>useAutoScroll</strong> 커스텀 훅을 구현, 새로운 섹션이 마운트될 때 자동으로 해당 섹션으로 스크롤
           </li>
-          <li>dropdown도 새로 마운트될 때 자동으로 열리게 하였습니다.</li>
+          <li>dropdown도 새로 마운트될 때 자동으로 열림 동작</li>
         </ul>
-        <video
-          src="https://github.com/user-attachments/assets/a1e3b760-8cbe-4530-8f73-cb0c8edc18f8"
-          controls
-          muted
-          className="d-block rounded-bottom-2 border-top width-fit"
-          style={{ width: "100%", maxWidth: "700px" }}
-        />
+        <details>
+          <summary>자동 스크롤 시연 영상</summary>
+          <video
+            src="https://github.com/user-attachments/assets/a1e3b760-8cbe-4530-8f73-cb0c8edc18f8"
+            controls
+            muted
+            className="d-block rounded-bottom-2 border-top width-fit"
+            style={{ width: "100%", maxWidth: "700px" }}
+          />
+        </details>
       </p>
 
       <br></br>
@@ -32,15 +38,19 @@ const ReviewPageContent = () => {
       <p>
         <strong>2) 유효하지 않은 항목으로 자동 스크롤</strong>
         <ul>
-          <li>'작성 완료' 클릭 시 유효성 검사에 실패한 첫 번째 섹션으로 이동하여 사용자가 바로 입력을 이어갈 수 있게 개선했습니다.</li>
+          <li>'작성 완료' 클릭 시 유효성 검사에 실패한 첫 번째 섹션으로 이동</li>
+          <li>사용자가 바로 입력을 이어갈 수 있게 개선</li>
         </ul>
-        <video
-          src="https://github.com/user-attachments/assets/1f608aa7-2b56-4ab7-b223-60455584eafe"
-          controls
-          muted
-          className="d-block rounded-bottom-2 border-top width-fit"
-          style={{ width: "100%", maxWidth: "700px" }}
-        />
+        <details>
+          <summary>유효하지 않은 항목 시연 영상</summary>
+          <video
+            src="https://github.com/user-attachments/assets/1f608aa7-2b56-4ab7-b223-60455584eafe"
+            controls
+            muted
+            className="d-block rounded-bottom-2 border-top width-fit"
+            style={{ width: "100%", maxWidth: "700px" }}
+          />
+        </details>
       </p>
 
       <br></br>

@@ -1,5 +1,4 @@
 import "./NetworkErrorContent.css";
-// import networkDemo from "../../../../../assets/network-demo.gif"; // TODO 용량 큼
 import github from "../../../../../assets/Github.svg";
 import jinsillogo from "../../../../../assets/jinsillogo.png";
 
@@ -7,16 +6,12 @@ const NetworkErrorContent = () => {
   return (
     <div className="corea-content">
       <h3>[문제점]</h3>
-      <p>저희 서비스는 오프라인일 때 이용할 수 있는 서비스가 없기 때문에 사용자의 빠른 네트워크 연결을 유도해야 합니다.</p>
-
-      <br></br>
-
-      <h3>[navigator.onLine 문제]</h3>
-      <p>
-        Chrome 계열 브라우저에서 <code>navigator.onLine</code>이 거짓 네거티브를 반환해, 실제 오프라인 상태인데도 온라인으로 판단되어 잘못된 UX가 발생했습니다.
-        <br></br>
-        탠스택 쿼리의 <code>onlineManager.ts</code> 코드를 참고하여 useNetwork 훅을 만들었습니다.
-      </p>
+      <ul>
+        <li>오프라인 시 서비스가 동작하지 않아 사용자에게 네트워크 복구를 즉시 안내해야 함</li>
+        <li>
+          Chrome 계열에서 <code>navigator.onLine</code>이 잘못된 값을 반환해 실제 오프라인임에도 온라인 UX가 보여짐
+        </li>
+      </ul>
 
       <br></br>
 
@@ -67,18 +62,6 @@ const NetworkErrorContent = () => {
         </tbody>
       </table>
 
-      <br></br>
-
-      <h3>[시연 영상]</h3>
-      <p>
-        {/* <img
-          src={networkDemo}
-          alt="네트워크 시연 영상"
-          width="100%"
-        /> */}
-      </p>
-
-      <br></br>
       <br></br>
 
       <h3>[참고 링크]</h3>

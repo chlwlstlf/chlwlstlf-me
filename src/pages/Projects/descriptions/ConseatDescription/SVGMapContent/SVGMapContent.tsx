@@ -35,7 +35,7 @@ const SVGMapContent = () => {
         <strong>4) 미니맵 연동</strong>
         <br />
         확대(scale)·이동(offset)을 기반으로 viewport 박스를 산출해 축소판에 렌더링 → 현재 보고 있는 영역을 실시간 시각화
-        <details className="diagram-detail">
+        <details>
           <summary>뷰포트 계산 로직 자세히 보기</summary>
           <img
             src={minimap}

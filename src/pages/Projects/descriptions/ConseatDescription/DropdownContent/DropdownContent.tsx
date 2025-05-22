@@ -9,12 +9,18 @@ const DropdownContent = () => {
   return (
     <div className="conseat-content">
       <h3>[문제점]</h3>
-      <p>피그마 디자인에 일반형 · 입력형 · 모달형 등 17가지가 넘는 다양한 드롭다운이 있었고, 이를 매번 개별 구현하면 개발과 유지보수가 매우 번거로울 거라 생각했습니다.</p>
+      <ul>
+        <li>피그마 디자인에 일반형 · 입력형 · 모달형 등 17가지가 넘는 다양한 드롭다운 UI</li>
+        <li>개별 구현 시 중복 코드·높은 유지보수 비용 발생</li>
+      </ul>
 
       <br></br>
 
       <h3>[해결방법]</h3>
-      <p>Compound Component 패턴으로 Dropdown의 핵심 로직과 스타일을 한 곳에 모아, 필요에 따라 Trigger·Menu·Item·Modal 옵션만 조합해 재사용할 수 있도록 설계했습니다.</p>
+      <ul>
+        <li>Compound Component 패턴: 핵심 로직과 스타일을 한 곳에 모아</li>
+        <li>Trigger·Menu·Item·Modal 옵션만 조합해 재사용할 수 있도록 설계</li>
+      </ul>
 
       <p>
         <strong>1) 기본 Dropdown</strong>
@@ -74,10 +80,12 @@ const DropdownContent = () => {
       <br></br>
 
       <h3>[성과]</h3>
-      <p>
-        • 코드 중복을 제거하고 재사용성을 강화, <strong>약 17개 드롭다운을 하나의 컴포넌트</strong>로 구현
-        <br></br>• 팀원 간 동일한 API 사용으로 개발 속도 향상 및 유지보수 편의성 확보
-      </p>
+      <ul>
+        <li>
+          코드 중복을 제거하고 재사용성을 강화: <strong>약 17개 드롭다운을 하나의 컴포넌트</strong>로 구현
+        </li>
+        <li>팀원 간 동일한 API 사용으로 개발 속도 향상 및 유지보수 편의성 확보</li>
+      </ul>
 
       <br></br>
 

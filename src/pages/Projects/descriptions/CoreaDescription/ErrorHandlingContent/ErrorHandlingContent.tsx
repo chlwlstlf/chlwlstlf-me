@@ -10,7 +10,7 @@ const ErrorHandlingContent = () => {
     <div className="corea-content">
       <h3>[문제점]</h3>
       <p>
-        401 인증 오류 시 단순 alert 처리로 인해 사용자가 직접 로그인 버튼을 클릭해야 하는 <strong>UX 단절</strong>이 발생했습니다.
+        401 인증 오류 시 단순 alert 처리로 인해 사용자가 직접 로그인 버튼을 클릭해야 하는 <strong>UX 단절</strong> 발생
       </p>
 
       <br></br>
@@ -18,8 +18,14 @@ const ErrorHandlingContent = () => {
       <h3>[해결방법]</h3>
       <p>
         <strong>1) 전역 에러 수집</strong>
-        <br></br>
-        Context API로 전역 에러를 수집하고, <code>queryClient</code>에 에러를 등록하면 <code>ErrorManager</code>가 트리거 되어 설정된 전략에 따라 적절한 UI를 노출합니다.
+        <ul>
+          <li>
+            Context API로 에러를 모아 <code>queryClient</code>에 등록
+          </li>
+          <li>
+            등록된 에러는 <code>ErrorManager</code>가 전략에 따라 UI를 노출
+          </li>
+        </ul>
       </p>
       <p>
         <strong>GET 요청</strong>
@@ -57,37 +63,47 @@ const ErrorHandlingContent = () => {
 
       <p>
         <strong>2) CustomError로 주요 에러 처리</strong>
-        <br></br>
-        <code>Error</code> 클래스를 상속해 전략(strategy)과 HTTP 상태 코드를 포함하는 <code>CustomError</code>를 구현하고, 이를 기반으로 `AuthorizationError`, `NetworkError`, `ApiError` 등 주요 에러를 일관된 전략으로 처리했습니다.
+        <ul>
+          <li>
+            <code>Error</code> 클래스를 상속해 전략(strategy)과 HTTP 상태 코드를 포함하는 <code>CustomError</code> 구현
+          </li>
+          <li>이를 기반으로 `AuthorizationError`, `NetworkError`, `ApiError` 등 주요 에러를 일관된 전략으로 처리</li>
+        </ul>
+        <details>
+          <summary>에러 분류 다이어그램</summary>
+          <img
+            src={errorTypes}
+            alt="에러 종류"
+            style={{
+              display: "block",
+              width: "100%",
+              maxWidth: "700px",
+              border: "1px solid #b7b7b7",
+              borderRadius: "15px",
+            }}
+          />
+        </details>
       </p>
-      <img
-        src={errorTypes}
-        alt="에러 종류"
-        style={{
-          display: "block",
-          width: "100%",
-          maxWidth: "700px",
-          border: "1px solid #b7b7b7",
-          borderRadius: "15px",
-        }}
-      />
 
       <br></br>
 
       <p>
         <strong>3) AuthorizationError 시 모달로 재로그인 유도</strong>
-        <br></br>
-        <strong>AuthorizationError</strong> 발생 시 “자동 로그인 모달”로 처리
-        <code>onConfirm</code>: 재로그인, <code>onCancel</code>: 홈 이동
-        <br></br>
+        <ul>
+          <li>
+            <strong>AuthorizationError</strong> 발생 시 “자동 로그인 모달”로 처리
+          </li>
+          <li>
+            <code>onConfirm</code>: 재로그인, <code>onCancel</code>: 홈 이동
+          </li>
+        </ul>
+        <img
+          src={authorizationError}
+          alt="재로그인 유도 화면"
+          width="70%"
+        />
       </p>
-      <img
-        src={authorizationError}
-        alt="재로그인 유도 화면"
-        width="70%"
-      />
 
-      <br></br>
       <br></br>
 
       <h3>[성과]</h3>

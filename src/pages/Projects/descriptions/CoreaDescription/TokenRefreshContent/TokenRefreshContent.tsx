@@ -8,31 +8,32 @@ const TokenRefreshContent = () => {
     <div className="corea-content">
       <h3>[문제점]</h3>
       <p>
-        ※ 토큰 갱신 API 요청 함수에 <code>await new Promise((resolve) ={">"} setTimeout(resolve, 3000));</code> 코드를 추가하여 Race Condition 이슈가 없는지 확인해보았습니다.
+        ※ 토큰 갱신 API 요청 함수에 <code>await new Promise((resolve) ={">"} setTimeout(resolve, 3000));</code> 코드를 추가하여 Race Condition 이슈가 없는지 확인
         <br></br>
-        🔥 Access Token이 만료된 상태에서 여러 API 요청이 거의 동시에 발생할 때, 각각의 요청이 독립적으로 토큰 갱신 API를 호출하여 <strong>Race Condition</strong>이 일어나고, 불필요한 중복 요청이 발생합니다.
+        Access Token이 만료된 상태에서 여러 API 요청이 거의 동시에 발생할 때, 각각의 요청이 독립적으로 토큰 갱신 API를 호출하여 <strong>Race Condition</strong>이 일어나고, 불필요한 중복 요청이 발생
+        <details>
+          <summary>리프레시 토큰 이전 화면 자세히 보기</summary>
+          <img
+            src={refreshToken1}
+            alt="리프레시 토큰 이전 화면"
+            style={{
+              display: "block",
+              width: "100%",
+              maxWidth: "700px",
+              margin: "0 auto",
+            }}
+          />
+        </details>
       </p>
-      <img
-        src={refreshToken1}
-        alt="리프레시 토큰 이전 화면"
-        style={{
-          display: "block",
-          width: "100%",
-          maxWidth: "700px",
-          margin: "0 auto",
-        }}
-      />
 
       <br></br>
 
       <h3>[원인]</h3>
-      <p>
-        1) 각 요청마다 401 응답을 받으면 곧바로 토큰 갱신 시도
-        <br></br>
-        2) 토큰 갱신 API 응답이 오기 전에도 다른 요청이 갱신 로직을 실행
-        <br></br>
-        3) localStorage에 새 토큰을 쓰는 타이밍이 엇갈리며 중복 호출
-      </p>
+      <ul>
+        <li>각 요청마다 401 응답을 받으면 곧바로 토큰 갱신 시도</li>
+        <li>토큰 갱신 API 응답이 오기 전에도 다른 요청이 갱신 로직을 실행</li>
+        <li>localStorage에 새 토큰을 쓰는 타이밍이 엇갈리며 중복 호출</li>
+      </ul>
 
       <br></br>
 
@@ -45,19 +46,21 @@ const TokenRefreshContent = () => {
         2) 추가 요청은 <code>failedQueue</code>에 resolve/reject 콜백으로 대기
         <br></br>
         3) 갱신 완료 후 <code>processQueue(null, newToken)</code> 호출로 대기 중인 요청들에 새 토큰을 전달하여 한꺼번에 재실행
+        <details>
+          <summary>리프레시 토큰 이후 화면 자세히 보기</summary>
+          <img
+            src={refreshToken2}
+            alt="리프레시 토큰 이후 화면"
+            style={{
+              display: "block",
+              width: "100%",
+              maxWidth: "700px",
+              margin: "0 auto",
+            }}
+          />
+        </details>
       </p>
-      <img
-        src={refreshToken2}
-        alt="리프레시 토큰 이후 화면"
-        style={{
-          display: "block",
-          width: "100%",
-          maxWidth: "700px",
-          margin: "0 auto",
-        }}
-      />
 
-      <br></br>
       <br></br>
 
       <h3>[참고 링크]</h3>
