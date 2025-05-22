@@ -4,6 +4,8 @@ import BlurUIContent from "./BlurUIContent/BlurUIContent";
 import ErrorHandlingContent from "./ErrorHandlingContent/ErrorHandlingContent";
 import "./CoreaDescription.css";
 import NetworkErrorContent from "./NetworkErrorContent/NetworkErrorContent";
+import CoreaScreenContent from "./CoreaScreenContent/CoreaScreenContent";
+import CoreaEtcContent from "./CoreaEtcContent/CoreaEtcContent";
 
 const CoreaDescription = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -36,11 +38,13 @@ const CoreaDescription = () => {
           4. 네트워크 에러 잡기
         </button>
       </nav>
-      <div className="tab-content">
-        {activeTab === 0 && <TokenRefreshContent />}
-        {activeTab === 1 && <BlurUIContent />}
-        {activeTab === 2 && <ErrorHandlingContent />}
-        {activeTab === 3 && <NetworkErrorContent />}
+      <div className="corea-tab-content">
+        {activeTab === 0 && <CoreaScreenContent />}
+        {activeTab === 1 && <TokenRefreshContent />}
+        {activeTab === 2 && <BlurUIContent />}
+        {activeTab === 3 && <ErrorHandlingContent />}
+        {activeTab === 4 && <NetworkErrorContent />}
+        {activeTab === 5 && <CoreaEtcContent />}
       </div>
     </div>
   );
