@@ -1,4 +1,3 @@
-import React from "react";
 import github from "../../../../../assets/Github.svg";
 import jinsillogo from "../../../../../assets/jinsillogo.png";
 
@@ -17,7 +16,7 @@ const ReviewPageContent = () => {
           <li>
             <strong>useAutoScroll</strong> 커스텀 훅을 구현하여, 새로운 섹션이 마운트될 때 자동으로 해당 섹션으로 스크롤되도록 했습니다.
           </li>
-          <li>dropdown도 새로운 섹션이 마운트될 때 자동으로 열리게 하였습니다.</li>
+          <li>dropdown도 새로 마운트될 때 자동으로 열리게 하였습니다.</li>
         </ul>
         <video
           src="https://github.com/user-attachments/assets/a1e3b760-8cbe-4530-8f73-cb0c8edc18f8"
