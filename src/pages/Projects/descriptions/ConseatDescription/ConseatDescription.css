@@ -67,7 +67,7 @@
   padding: 0.1em 0.4em;
   background-color: #f4f4f4;
   border-radius: 4px;
-  font-family: monospace;
+  font-family: Consolas;
   font-size: 1.2rem;
   font-weight: 500;
   color: #ff5555;
@@ -78,6 +78,19 @@
   display: block;
   margin: 0.5rem 0;
   font-size: 1.3rem;
+}
+
+/* 리스트 스타일 추가 */
+.conseat-content ul {
+  margin: 0.75rem 0 1rem 1.5rem;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.conseat-content ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 
 /* 링크 블록 */
