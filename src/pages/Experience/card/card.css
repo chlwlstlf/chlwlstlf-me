@@ -1,9 +1,8 @@
 .experience-card {
   background: #fff;
-  min-width: 500px;
-  width: 40vw;
-  max-width: 1000px;
-  margin: 0 auto;
+  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
   padding: 2rem 1rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
