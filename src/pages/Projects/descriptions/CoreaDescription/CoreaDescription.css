@@ -2,10 +2,20 @@
   font-family: sans-serif;
 }
 
+/* 내브바 가로스크롤 */
+.corea-tabs-nav {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
 /* 공통 탭 버튼 */
 .corea-tabs-nav button {
   position: relative;
-  flex: 1;
+  flex: 0 0 auto;
+
+  scroll-snap-align: start;
+  white-space: nowrap;
   padding: 8px 16px;
   margin-right: -4px;
   background: #7cacd8;
