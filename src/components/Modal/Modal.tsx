@@ -6,11 +6,9 @@ interface ModalMainProps {
   children: ReactNode;
 }
 const ModalMain = ({ children }: ModalMainProps) => {
-  // 포탈 대상
   const modalRoot = document.getElementById("portal");
 
   useEffect(() => {
-    // body 스크롤 잠금
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "";
@@ -23,10 +21,10 @@ const ModalMain = ({ children }: ModalMainProps) => {
   return ReactDOM.createPortal(<>{children}</>, modalRoot);
 };
 
-export interface ModalOverlayProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ModalOverlayProps extends React.HTMLAttributes<HTMLDivElement> {
   onClick: () => void;
 }
-export const ModalOverlay = ({ onClick, className = "", style, ...rest }: ModalOverlayProps) => (
+const ModalOverlay = ({ onClick, className = "", style, ...rest }: ModalOverlayProps) => (
   <div
     {...rest}
     onClick={onClick}
@@ -35,10 +33,10 @@ export const ModalOverlay = ({ onClick, className = "", style, ...rest }: ModalO
   />
 );
 
-export interface ModalContentProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ModalContentProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
 }
-export const ModalContent = ({ children, className = "", style, ...rest }: ModalContentProps) => (
+const ModalContent = ({ children, className = "", style, ...rest }: ModalContentProps) => (
   <div
     {...rest}
     className={`modal-content${className ? ` ${className}` : ""}`}
@@ -48,32 +46,35 @@ export const ModalContent = ({ children, className = "", style, ...rest }: Modal
   </div>
 );
 
-export interface ModalHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ModalHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   onClose: () => void;
-  showCloseButton?: boolean;
 }
-export const ModalHeader = ({ title, onClose, showCloseButton = true, className = "", ...rest }: ModalHeaderProps) => (
+const ModalHeader = ({ title, onClose, className = "", ...rest }: ModalHeaderProps) => (
   <div
     {...rest}
     className={`modal-header${className ? ` ${className}` : ""}`}
   >
-    {showCloseButton && (
-      <button
-        className="modal-close-button"
-        onClick={onClose}
-      >
-        ×
-      </button>
-    )}
     <h1 className="modal-title">{title}</h1>
   </div>
+);
+
+interface ModalCloseButtonProps extends React.HTMLAttributes<HTMLButtonElement> {}
+const ModalCloseButton = ({ ...rest }: ModalCloseButtonProps) => (
+  <button
+    type="button"
+    aria-label="Close modal"
+    {...rest}
+  >
+    &times;
+  </button>
 );
 
 const Modal = Object.assign(ModalMain, {
   Overlay: ModalOverlay,
   Content: ModalContent,
   Header: ModalHeader,
+  CloseButton: ModalCloseButton,
 });
 
 export default Modal;

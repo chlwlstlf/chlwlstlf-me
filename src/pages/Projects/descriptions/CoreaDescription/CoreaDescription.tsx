@@ -41,7 +41,7 @@ const CoreaDescription = () => {
           className={activeTab === 4 ? "active" : ""}
           onClick={() => setActiveTab(4)}
         >
-          4. 네트워크 에러 잡기
+          4. 네트워크 에러 처리
         </button>
         <button
           className={activeTab === 5 ? "active" : ""}
