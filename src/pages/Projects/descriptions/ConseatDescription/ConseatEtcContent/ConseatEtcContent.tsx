@@ -59,6 +59,16 @@ const ConseatEtcContent = () => {
           이미지 첫 요소에 <code>priority</code> 부여 → LCP 8.1s→3.0s 단축
         </li>
       </ul>
+
+      <br />
+
+      <h3>[DelayLoading 컴포넌트]</h3>
+      <ul>
+        <li>
+          비동기 데이터 호출 후 <strong>0.5초 지연</strong> 후 로딩 컴포넌트 표시 → 깜빡임 최소화
+        </li>
+        <li>빠른 네트워크 환경에서 발생하는 레이아웃 시프트(layout shift) 해결</li>
+      </ul>
     </div>
   );
 };

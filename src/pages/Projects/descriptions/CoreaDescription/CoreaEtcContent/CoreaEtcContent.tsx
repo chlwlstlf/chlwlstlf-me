@@ -28,6 +28,16 @@ const CoreaEtcContent = () => {
       <ul>
         <li>ARIA 속성 추가 및 Screen Reader 지원 향상</li>
       </ul>
+
+      <br></br>
+
+      <h3>[반응형 유틸 도입]</h3>
+      <ul>
+        <li>
+          프로젝트 전역에서 반복되던 <code>@media</code> 문을 styled-components 미디어쿼리 유틸로 통합
+        </li>
+        <li>브레이크포인트 변경 한 곳에서 관리, CSS 가독성·유지보수성 ↑</li>
+      </ul>
     </div>
   );
 };
