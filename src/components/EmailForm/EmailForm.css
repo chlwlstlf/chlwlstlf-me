@@ -13,11 +13,16 @@
 .email-row {
   display: flex;
   gap: 1rem;
+
+  justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .email-field {
   display: flex;
+  flex: 1 1 0;
+  min-width: 200px;
   flex-direction: column;
   width: 100%;
 }
