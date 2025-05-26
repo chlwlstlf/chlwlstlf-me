@@ -1,16 +1,11 @@
-:root {
-  /* 카드 10% 확대 */
-  --card-scale: 1.5;
-}
-
 .project-card {
   position: relative;
-  width: calc(300px * var(--card-scale));
-  height: calc(200px * var(--card-scale));
+  width: 450px;
+  height: 300px;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  margin: calc(1rem * var(--card-scale));
+  margin: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 

@@ -19,7 +19,7 @@ const CONSEAT_IMAGES = [
 ];
 
 const ConseatScreenContent = () => {
-  const { imageIndex, handleClickNext, handleClickPrev } = useImageSlide({
+  const { imageIndex, hasPrev, hasNext, handleClickPrev, handleClickNext } = useImageSlide({
     initialIdx: 0,
     totalImageNumber: CONSEAT_IMAGES.length,
   });
@@ -33,6 +33,8 @@ const ConseatScreenContent = () => {
           imageSrcArray={images}
           currentIndex={imageIndex}
           height={500}
+          hasPrev={hasPrev}
+          hasNext={hasNext}
           onNext={handleClickNext}
           onPrev={handleClickPrev}
         />

@@ -7,7 +7,7 @@ const TokenRefreshContent = () => {
   return (
     <div className="corea-content">
       <h3>[문제점]</h3>
-      <p>
+      <div className="corea-content-detail">
         ※ 토큰 갱신 API 요청 함수에 <code>await new Promise((resolve) ={">"} setTimeout(resolve, 3000));</code> 코드를 추가하여 Race Condition 이슈가 없는지 확인
         <br></br>
         Access Token이 만료된 상태에서 여러 API 요청이 거의 동시에 발생할 때, 각각의 요청이 독립적으로 토큰 갱신 API를 호출하여 <strong>Race Condition</strong>이 일어나고, 불필요한 중복 요청이 발생
@@ -24,7 +24,7 @@ const TokenRefreshContent = () => {
             }}
           />
         </details>
-      </p>
+      </div>
 
       <br></br>
 
@@ -38,7 +38,7 @@ const TokenRefreshContent = () => {
       <br></br>
 
       <h3>[해결방법]</h3>
-      <p>
+      <div className="corea-content-detail">
         전역 <code>isRefreshing</code> 플래그와 <code>failedQueue</code>를 도입하여
         <br></br>
         1) 최초 401 응답 시 <code>isRefreshing = true</code>로 설정하고 토큰 갱신 요청을 한 번만 실행
@@ -59,7 +59,7 @@ const TokenRefreshContent = () => {
             }}
           />
         </details>
-      </p>
+      </div>
 
       <br></br>
 

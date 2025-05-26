@@ -14,13 +14,13 @@ const CoreaEtcContent = () => {
       <br></br>
 
       <h3>[성능 최적화]</h3>
-      <p>
+      <div className="corea-content-detail">
         <strong>Lighthouse 49점 → 96점, LCP 3.1s → 1.1s</strong>
         <ul>
           <li>png 이미지를 webp로 변경하여 페이지 로딩 속도 개선</li>
           <li>React.memo 및 Lazy Loading 적용</li>
         </ul>
-      </p>
+      </div>
 
       <br></br>
 

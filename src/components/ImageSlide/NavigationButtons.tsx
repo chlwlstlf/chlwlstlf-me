@@ -5,17 +5,19 @@ import nextArrow from "../../assets/next-arrow.svg";
 interface NavigationButtonsProps {
   total: number;
   currentIndex: number;
+  hasPrev?: boolean;
+  hasNext?: boolean;
   onNext: () => void;
   onPrev: () => void;
 }
 
-const NavigationButtons = ({ total, currentIndex, onPrev, onNext }: NavigationButtonsProps) => (
+const NavigationButtons = ({ total, currentIndex, hasPrev, hasNext, onPrev, onNext }: NavigationButtonsProps) => (
   <>
     <button
       className="prev"
       onClick={onPrev}
       aria-label="이전 슬라이드"
-      disabled={currentIndex === 0}
+      disabled={!hasPrev}
     >
       <img
         src={prevArrow}
@@ -26,7 +28,7 @@ const NavigationButtons = ({ total, currentIndex, onPrev, onNext }: NavigationBu
       className="next"
       onClick={onNext}
       aria-label="다음 슬라이드"
-      disabled={currentIndex === total - 1}
+      disabled={!hasNext}
     >
       <img
         src={nextArrow}

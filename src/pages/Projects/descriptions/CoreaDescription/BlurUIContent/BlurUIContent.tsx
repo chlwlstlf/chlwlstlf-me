@@ -5,8 +5,8 @@ const BlurUIContent = () => {
   return (
     <div className="corea-content">
       <h3>[문제점]</h3>
-      <p>코드 리뷰 마감일 이전까지만 피드백 작성·수정 가능</p>
-      <p>사용자 피드백 예시</p>
+      <div className="corea-content-detail">코드 리뷰 마감일 이전까지만 피드백 작성·수정 가능</div>
+      <div className="corea-content-detail">사용자 피드백 예시</div>
       <ul>
         <li>"코드 리뷰 3명 했는데 돌려받은 피드백이 없어요."</li>
         <li>"깜빡하고 못 썼는데 방이 마감됐습니다."</li>
@@ -15,15 +15,15 @@ const BlurUIContent = () => {
       <br></br>
 
       <h3>[기획 및 개발]</h3>
-      <p>
+      <div className="corea-content-detail">
         <strong>1. 피드백 작성 및 수정 계속 가능</strong>
         <ul>
           <li>마감일 이후에도 작성·수정 기능 확장</li>
           <li>작성 압박 완화, 서비스 유연성↑</li>
         </ul>
-      </p>
+      </div>
 
-      <p>
+      <div className="corea-content-detail">
         <strong>2. 피드백 블러 처리</strong>
         <ul>
           <li>상호 피드백 전까지 블러 처리 도입</li>
@@ -42,17 +42,17 @@ const BlurUIContent = () => {
             }}
           />
         </details>
-      </p>
+      </div>
 
       <br></br>
 
       <h3>[성과]</h3>
-      <p>
+      <div className="corea-content-detail">
         이전: <strong>452건 (49.8%)</strong>
-      </p>
-      <p>
+      </div>
+      <div className="corea-content-detail">
         이후: <strong>521건 (57.3%)</strong> (+7.5%, +69건)
-      </p>
+      </div>
 
       <br></br>
 

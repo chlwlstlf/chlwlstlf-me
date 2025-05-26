@@ -6,11 +6,13 @@ interface ImageSlideProps {
   imageSrcArray: string[];
   currentIndex: number;
   height?: number | string;
+  hasPrev: boolean;
+  hasNext: boolean;
   onNext: () => void;
   onPrev: () => void;
 }
 
-const ImageSlide = ({ imageSrcArray, currentIndex, height = "auto", onPrev, onNext }: ImageSlideProps) => {
+const ImageSlide = ({ imageSrcArray, currentIndex, height = "auto", hasPrev, hasNext, onPrev, onNext }: ImageSlideProps) => {
   const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipe(onNext, onPrev);
   const total = imageSrcArray.length;
 
@@ -49,6 +51,8 @@ const ImageSlide = ({ imageSrcArray, currentIndex, height = "auto", onPrev, onNe
       <NavigationButtons
         total={total}
         currentIndex={currentIndex}
+        hasPrev={hasPrev}
+        hasNext={hasNext}
         onPrev={onPrev}
         onNext={onNext}
       />

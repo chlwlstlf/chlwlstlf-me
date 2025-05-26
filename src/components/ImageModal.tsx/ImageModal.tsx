@@ -6,13 +6,15 @@ interface ImageModalProps {
   children: React.ReactNode;
 }
 
-export function ImageModal({ isOpen, onClose, children }: ImageModalProps) {
+const ImageModal = ({ isOpen, onClose, children }: ImageModalProps) => {
   if (!isOpen) return null;
 
   return (
     <Modal>
       <Modal.Overlay onClick={onClose} />
-      <Modal.Content>{children}</Modal.Content>
+      <Modal.Content style={{ maxWidth: "90vw", maxHeight: "90vh" }}>{children}</Modal.Content>
     </Modal>
   );
-}
+};
+
+export default ImageModal;

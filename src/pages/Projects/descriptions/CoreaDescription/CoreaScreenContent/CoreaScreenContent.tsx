@@ -19,7 +19,7 @@ const COREA_IMAGES = [
 ];
 
 const CoreaScreenContent = () => {
-  const { imageIndex, handleClickNext, handleClickPrev } = useImageSlide({
+  const { imageIndex, hasPrev, hasNext, handleClickPrev, handleClickNext } = useImageSlide({
     initialIdx: 0,
     totalImageNumber: COREA_IMAGES.length,
   });
@@ -32,6 +32,8 @@ const CoreaScreenContent = () => {
       <ImageSlide
         imageSrcArray={images}
         currentIndex={imageIndex}
+        hasPrev={hasPrev}
+        hasNext={hasNext}
         onNext={handleClickNext}
         onPrev={handleClickPrev}
       />

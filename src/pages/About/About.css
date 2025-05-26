@@ -91,6 +91,7 @@
   color: #222;
   min-height: 3rem;
   margin-bottom: 2rem;
+  word-break: keep-all;
 }
 
 .blink {
@@ -152,7 +153,20 @@
   line-height: 1.6;
   margin-bottom: 0.5rem;
 }
-.details .link-button {
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.blog-modal-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 1.6;
   color: #0066cc;
   text-decoration: underline;
 }

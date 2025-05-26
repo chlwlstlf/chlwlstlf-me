@@ -13,7 +13,7 @@ const ReviewPageContent = () => {
       <br></br>
 
       <h3>[해결방법]</h3>
-      <p>
+      <div className="conseat-content-detail">
         <strong>1) 자동 스크롤</strong>
         <ul>
           <li>
@@ -31,11 +31,11 @@ const ReviewPageContent = () => {
             style={{ width: "100%", maxWidth: "700px" }}
           />
         </details>
-      </p>
+      </div>
 
       <br></br>
 
-      <p>
+      <div className="conseat-content-detail">
         <strong>2) 유효하지 않은 항목으로 자동 스크롤</strong>
         <ul>
           <li>'작성 완료' 클릭 시 유효성 검사에 실패한 첫 번째 섹션으로 이동</li>
@@ -51,7 +51,7 @@ const ReviewPageContent = () => {
             style={{ width: "100%", maxWidth: "700px" }}
           />
         </details>
-      </p>
+      </div>
 
       <br></br>
 

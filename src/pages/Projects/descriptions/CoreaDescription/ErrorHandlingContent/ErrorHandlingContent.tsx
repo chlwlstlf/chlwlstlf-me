@@ -9,14 +9,14 @@ const ErrorHandlingContent = () => {
   return (
     <div className="corea-content">
       <h3>[문제점]</h3>
-      <p>
+      <div className="corea-content-detail">
         401 인증 오류 시 단순 alert 처리로 인해 사용자가 직접 로그인 버튼을 클릭해야 하는 <strong>UX 단절</strong> 발생
-      </p>
+      </div>
 
       <br></br>
 
       <h3>[해결방법]</h3>
-      <p>
+      <div className="corea-content-detail">
         <strong>1) 전역 에러 수집</strong>
         <ul>
           <li>
@@ -26,8 +26,9 @@ const ErrorHandlingContent = () => {
             등록된 에러는 <code>ErrorManager</code>가 전략에 따라 UI를 노출
           </li>
         </ul>
-      </p>
-      <p>
+      </div>
+
+      <div className="corea-content-detail">
         <strong>GET 요청</strong>
         <br></br>
         <img
@@ -41,9 +42,9 @@ const ErrorHandlingContent = () => {
             borderRadius: "15px",
           }}
         />
-      </p>
-      <br></br>
-      <p>
+      </div>
+
+      <div className="corea-content-detail">
         <strong>POST, PUT, DELETE 요청</strong>
         <br></br>
         <img
@@ -57,11 +58,11 @@ const ErrorHandlingContent = () => {
             borderRadius: "15px",
           }}
         />
-      </p>
+      </div>
 
       <br></br>
 
-      <p>
+      <div className="corea-content-detail">
         <strong>2) CustomError로 주요 에러 처리</strong>
         <ul>
           <li>
@@ -83,11 +84,11 @@ const ErrorHandlingContent = () => {
             }}
           />
         </details>
-      </p>
+      </div>
 
       <br></br>
 
-      <p>
+      <div className="corea-content-detail">
         <strong>3) AuthorizationError 시 모달로 재로그인 유도</strong>
         <ul>
           <li>
@@ -105,18 +106,18 @@ const ErrorHandlingContent = () => {
             width="70%"
           />
         </details>
-      </p>
+      </div>
 
       <br></br>
 
       <h3>[성과]</h3>
-      <p>
+      <div className="corea-content-detail">
         <strong>401 인증 후 재로그인 흐름 50% 개선</strong>
         <br></br>
         이전 : 1️⃣ alert 확인 버튼 클릭 → 2️⃣ 로그인 버튼 클릭
         <br></br>
         이후 : 1️⃣ 모달의 로그인하기 버튼 클릭
-      </p>
+      </div>
 
       <br></br>
 

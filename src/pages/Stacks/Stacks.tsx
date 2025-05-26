@@ -6,16 +6,16 @@ import reactIcon from "../../assets/React.svg";
 import nextIcon from "../../assets/NextJS.svg";
 import tanstackQueryIcon from "../../assets/TanStackQuery.svg";
 import styledIcon from "../../assets/StyledComponents.svg";
-import gitIcon from "../../assets/Github.svg";
+import scssIcon from "../../assets/sass.svg";
 
 const TECH_STACK = [
   { icon: jsIcon, label: "JavaScript" },
   { icon: tsIcon, label: "TypeScript" },
   { icon: reactIcon, label: "React" },
   { icon: nextIcon, label: "Next.js" },
-  { icon: tanstackQueryIcon, label: "TanStack-Query" },
+  { icon: tanstackQueryIcon, label: "TanStack Query" },
   { icon: styledIcon, label: "styled-components" },
-  { icon: gitIcon, label: "GitHub" },
+  { icon: scssIcon, label: "SCSS" },
 ];
 
 const Stacks = () => {

@@ -22,7 +22,7 @@ const DropdownContent = () => {
         <li>Trigger·Menu·Item·Modal 컴포넌트 조합으로 다양한 변형 지원</li>
       </ul>
 
-      <p>
+      <div className="conseat-content-detail">
         <strong>1) 기본 Dropdown</strong>
         <img
           src={dropdown1}
@@ -36,11 +36,11 @@ const DropdownContent = () => {
             borderRadius: "15px",
           }}
         />
-      </p>
+      </div>
 
       <br></br>
 
-      <p>
+      <div className="conseat-content-detail">
         <strong>2) Dropdown + Input</strong>
         <img
           src={dropdown2}
@@ -54,11 +54,11 @@ const DropdownContent = () => {
             borderRadius: "15px",
           }}
         />
-      </p>
+      </div>
 
       <br></br>
 
-      <p>
+      <div className="conseat-content-detail">
         <strong>3) Dropdown + Modal</strong>
         <img
           src={dropdown3}
@@ -72,7 +72,7 @@ const DropdownContent = () => {
             borderRadius: "15px",
           }}
         />
-      </p>
+      </div>
 
       <br></br>
 

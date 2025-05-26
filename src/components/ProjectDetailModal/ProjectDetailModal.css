@@ -6,6 +6,17 @@
   overflow: hidden;
 }
 
+/* 모바일에서 풀스크린으로 */
+@media (max-width: 768px) {
+  .detail-modal-content {
+    width: 100vw;
+    height: 100vh;
+
+    padding: 1rem;
+    border-radius: 0;
+  }
+}
+
 /* 모달 내부 */
 .detail-modal-body {
   width: 100%;

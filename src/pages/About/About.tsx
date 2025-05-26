@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./About.css";
 import { useModal } from "../../hooks/useModal";
-import { ImageModal } from "../../components/ImageModal.tsx/ImageModal";
 import blogImg from "../../assets/blog.png";
 import figmaCommentImg from "../../assets/figma-comments.png";
+import ImageModal from "../../components/ImageModal.tsx/ImageModal";
+import { IconType } from "react-icons";
+import { FiExternalLink as _FiExternalLink } from "react-icons/fi";
 
-const fullText = "프론트엔드 개발자 최진실입니다.";
+const FiExternalLink = _FiExternalLink as IconType;
+
+const fullText = "꼼꼼히 기록하고, 빠르게 실행하는 프론트엔드 개발자 최진실입니다.";
 
 const About = () => {
   const [text, setText] = useState("");
@@ -18,7 +22,7 @@ const About = () => {
       const timeout = setTimeout(() => {
         setText(fullText.slice(0, count + 1));
         setCount(count + 1);
-      }, 150);
+      }, 100);
       return () => clearTimeout(timeout);
     }
   }, [count]);
@@ -69,9 +73,9 @@ const About = () => {
       </div>
 
       <div className="details">
-        <h2>개발 과정을 기록하고 팀원과 공유합니다.</h2>
+        <h2>기술 이슈를 문서로 풀어가는 개발자입니다.</h2>
         <ul>
-          <li>문제를 해결하면 끝내지 않고, 기술 블로그로 정리해 팀에 공유하는 습관이 있습니다.</li>
+          <li>문제를 해결한 뒤 결과만 정리하는 것이 아니라, 시도·분석·해결 과정을 모두 기록하고 공유하는 습관이 있습니다.</li>
           <li>
             직접{" "}
             <button
@@ -84,7 +88,7 @@ const About = () => {
           </li>
         </ul>
 
-        <h2>UX를 주도적으로 개선합니다.</h2>
+        <h2>프로토타입으로 말하는 개발자입니다.</h2>
         <ul>
           <li>
             직접 사용하며 불편을 느낀 순간마다 Figma에{" "}
@@ -106,6 +110,10 @@ const About = () => {
               rel="noopener noreferrer"
             >
               전/후 비교 영상
+              <FiExternalLink
+                style={{ marginLeft: "0.1em" }}
+                aria-hidden="true"
+              />
             </a>
             을 제작한 뒤,
             <br></br>
@@ -121,6 +129,19 @@ const About = () => {
         onClose={blogModal.close}
       >
         <h2>팀 기술 블로그 공간</h2>
+
+        <a
+          className="blog-modal-link"
+          href="https://speckled-parsley-433.notion.site/19e0897d8cac80c7bba8ffc62cac8430?v=67d83df9c4164859b454ed94e50b1ca7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CON:SEAT 팀 블로그 보러가기
+          <FiExternalLink
+            style={{ marginLeft: "0.25em" }}
+            aria-hidden="true"
+          />
+        </a>
         <img
           src={blogImg}
           alt="블로그 스크린샷"
@@ -136,8 +157,8 @@ const About = () => {
         <h2>Figma 코멘트</h2>
         <img
           src={figmaCommentImg}
-          style={{ width: "100%", height: "auto" }}
           alt="Figma 코멘트 예시"
+          style={{ width: "80vw", height: "auto" }}
         />
       </ImageModal>
     </section>

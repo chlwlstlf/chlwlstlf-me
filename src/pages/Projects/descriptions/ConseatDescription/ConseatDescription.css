@@ -17,7 +17,6 @@
   scroll-snap-align: start;
   white-space: nowrap;
   padding: 8px 16px;
-  margin-right: -4px;
   background: #00ffe5;
   color: #000000;
   border: 1px solid #ddd;
@@ -84,7 +83,7 @@
 }
 
 /* 일반 문단 */
-.conseat-content > p {
+.conseat-content-detail {
   display: block;
   margin: 0.5rem 0;
   font-size: 1.3rem;

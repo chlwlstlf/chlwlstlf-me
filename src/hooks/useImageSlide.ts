@@ -7,18 +7,16 @@ interface UseImageSlideProps {
 
 const useImageSlide = ({ initialIdx, totalImageNumber }: UseImageSlideProps) => {
   const [imageIndex, setImageIndex] = useState(initialIdx);
-
-  const handleClickNext = () => {
-    const nextIdx = imageIndex >= totalImageNumber - 1 ? 0 : imageIndex + 1;
-    setImageIndex(nextIdx);
-  };
+  const hasPrev = imageIndex > 0;
+  const hasNext = imageIndex < totalImageNumber - 1;
 
   const handleClickPrev = () => {
-    const nextIdx = imageIndex <= 0 ? totalImageNumber - 1 : imageIndex - 1;
-    setImageIndex(nextIdx);
+    if (hasPrev) setImageIndex((i) => i - 1);
+  };
+  const handleClickNext = () => {
+    if (hasNext) setImageIndex((i) => i + 1);
   };
 
-  return { imageIndex, handleClickNext, handleClickPrev };
+  return { imageIndex, hasPrev, hasNext, handleClickPrev, handleClickNext };
 };
-
 export default useImageSlide;

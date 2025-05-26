@@ -6,32 +6,33 @@ const SVGMapContent = () => {
   return (
     <div className="conseat-content">
       <h3>[문제점]</h3>
-      <p>
-        <code>&lt;Image&gt;</code>로 삽입한 SVG가 비트맵으로 처리되어
+      <div className="conseat-content-detail">
         <ul>
-          <li>클릭 이벤트 바인딩 불가</li>
-          <li>CSS 필터(밝기·드롭섀도우) 적용 불가</li>
+          <li>
+            <code>&lt;Image&gt;</code>로 삽입한 SVG가 비트맵으로 처리되어 클릭 이벤트 바인딩 불가, CSS 필터(밝기·드롭섀도우) 적용 불가
+          </li>
+          <li>프론트엔드 번들에 SVG 파일이 직접 포함돼 번들 크기 증가</li>
         </ul>
-      </p>
+      </div>
       <br></br>
       <h3>[해결 방법]</h3>
-      <p>
+      <div className="conseat-content-detail">
         <strong>1) SVG 인라인화</strong>
         <br />
         CloudFront에 호스팅된 SVG를 <code>fetch()</code>로 문자열로 가져와
         <code>dangerouslySetInnerHTML</code>로 삽입 → DOM 제어 가능
-      </p>
-      <p>
+      </div>
+      <div className="conseat-content-detail">
         <strong>2) 좌석 클릭 로직</strong>
         <br />
         클릭된 좌석 그룹(<code>g[id^="btn"]</code>)에만 클래스 토글 → 하나의 좌석만 밝고 나머지는 어둡게 처리
-      </p>
-      <p>
+      </div>
+      <div className="conseat-content-detail">
         <strong>3) Pan/Zoom 한계 설정</strong>
         <br />
         <code>clamp()</code> 유틸로 translate 한계 설정 → SVG가 컨테이너 바깥으로 빠지지 않도록 방지
-      </p>
-      <p>
+      </div>
+      <div className="conseat-content-detail">
         <strong>4) 미니맵 연동</strong>
         <br />
         확대(scale)·이동(offset)을 기반으로 viewport 박스를 산출해 축소판에 렌더링 → 현재 보고 있는 영역을 실시간 시각화
@@ -49,12 +50,12 @@ const SVGMapContent = () => {
             }}
           />
         </details>
-      </p>
-      <p>
+      </div>
+      <div className="conseat-content-detail">
         <strong>5) 크로스 브라우저 호환</strong>
         <br />
         SVG 문자열 내 <code>&lt;defs&gt;</code> 필터(밝기+드롭섀도우) 주입 → iOS·Android·데스크톱 모두 동일한 밝기 효과 구현
-      </p>
+      </div>
       <br></br>
       <h3>[구현 효과]</h3>
       <ul>
