@@ -6,7 +6,7 @@ const ReviewPageContent = () => {
     <div className="conseat-content">
       <h3>[문제점]</h3>
       <ul>
-        <li>리뷰 작성은 7단계로 구성</li>
+        <li>리뷰 작성은 세로 7단계로 구성</li>
         <li>페이지가 길어질수록 원하는 입력 섹션으로 이동하기 위해 과도한 스크롤·클릭이 필요함</li>
       </ul>
 

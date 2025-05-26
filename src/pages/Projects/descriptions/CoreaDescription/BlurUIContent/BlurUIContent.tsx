@@ -6,7 +6,7 @@ const BlurUIContent = () => {
     <div className="corea-content">
       <h3>[문제점]</h3>
       <div className="corea-content-detail">코드 리뷰 마감일 이전까지만 피드백 작성·수정 가능</div>
-      <div className="corea-content-detail">사용자 피드백 예시</div>
+      <strong className="corea-content-detail">사용자 피드백 예시</strong>
       <ul>
         <li>"코드 리뷰 3명 했는데 돌려받은 피드백이 없어요."</li>
         <li>"깜빡하고 못 썼는데 방이 마감됐습니다."</li>

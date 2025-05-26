@@ -35,7 +35,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: Props) => {
 
           <div className="detail-meta">
             <div className="detail-meta-item">
-              <strong>💡 소개 :</strong> <span>{project.introduction}</span>
+              <strong>👑 소개 :</strong> <span>{project.introduction}</span>
             </div>
             {project.users && (
               <div className="detail-meta-item">
@@ -52,6 +52,12 @@ const ProjectDetailModal = ({ project, isOpen, onClose }: Props) => {
               <strong>🎯 역할 : </strong>
               <span>{project.role}</span>
             </div>
+            {project.techSelectionReason && (
+              <div className="detail-meta-item">
+                <strong>💡 기술 선택 이유 :</strong>
+                <span>{project.techSelectionReason}</span>
+              </div>
+            )}
             <div className="detail-meta-item">
               <strong>💻 Skills :</strong>
               {project.skills.length > 0 && (

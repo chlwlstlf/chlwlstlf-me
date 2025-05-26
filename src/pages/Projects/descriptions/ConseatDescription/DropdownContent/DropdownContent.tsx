@@ -31,7 +31,6 @@ const DropdownContent = () => {
             display: "block",
             width: "100%",
             maxWidth: "700px",
-            margin: "0 auto",
             border: "1px solid #b7b7b7",
             borderRadius: "15px",
           }}
@@ -49,7 +48,6 @@ const DropdownContent = () => {
             display: "block",
             width: "100%",
             maxWidth: "700px",
-            margin: "0 auto",
             border: "1px solid #b7b7b7",
             borderRadius: "15px",
           }}
@@ -67,7 +65,6 @@ const DropdownContent = () => {
             display: "block",
             width: "100%",
             maxWidth: "700px",
-            margin: "0 auto",
             border: "1px solid #b7b7b7",
             borderRadius: "15px",
           }}

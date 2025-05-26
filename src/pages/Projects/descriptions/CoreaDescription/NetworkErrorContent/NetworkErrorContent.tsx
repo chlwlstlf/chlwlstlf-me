@@ -27,11 +27,24 @@ const NetworkErrorContent = () => {
         </thead>
         <tbody>
           <tr>
+            <td>네트워크 상태 감지</td>
+            <td>
+              navigator.onLine 사용
+              <br />
+              크롬 계열에서 거짓 네거티브 발생
+            </td>
+            <td>
+              window 이벤트 기반 useNetwork 훅 구현
+              <br />
+              정확한 온라인/오프라인 판별
+            </td>
+          </tr>
+          <tr>
             <td>queries.networkMode</td>
             <td>
               networkMode: "always",
               <br />
-              Fallback UI
+              바로 Fallback UI
             </td>
             <td>
               networkMode: "online"
@@ -42,7 +55,7 @@ const NetworkErrorContent = () => {
           <tr>
             <td>오프라인 Toast</td>
             <td>
-              Toast 한 번,
+              한 번만 뜨는 Toast
               <br />
               사용자가 못 보는 이슈
             </td>

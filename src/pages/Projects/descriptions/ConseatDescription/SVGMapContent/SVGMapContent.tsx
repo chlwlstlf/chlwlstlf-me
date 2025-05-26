@@ -1,10 +1,29 @@
 import github from "../../../../../assets/Github.svg";
 import jinsillogo from "../../../../../assets/jinsillogo.png";
+import svgMap from "../../../../../assets/svg-map.png";
 import minimap from "../../../../../assets/minimap.png";
 
 const SVGMapContent = () => {
   return (
     <div className="conseat-content">
+      <h3>[도입 배경]</h3>
+      <ul>
+        <li>시각적 맵으로 공연장 좌석 배치를 한눈에 파악하고 클릭만으로 원하는 좌석을 정확히 선택 가능</li>
+        <li>마우스 오버·줌·툴팁 등 인터랙션으로 직관적이고 몰입감 있는 경험 제공</li>
+      </ul>
+
+      <img
+        src={svgMap}
+        alt="좌석 배치도"
+        style={{
+          width: "100%",
+          maxWidth: 300,
+          display: "block",
+        }}
+      />
+
+      <br></br>
+
       <h3>[문제점]</h3>
       <div className="conseat-content-detail">
         <ul>
@@ -14,7 +33,9 @@ const SVGMapContent = () => {
           <li>프론트엔드 번들에 SVG 파일이 직접 포함돼 번들 크기 증가</li>
         </ul>
       </div>
+
       <br></br>
+
       <h3>[해결 방법]</h3>
       <div className="conseat-content-detail">
         <strong>1) SVG 인라인화</strong>
@@ -56,14 +77,18 @@ const SVGMapContent = () => {
         <br />
         SVG 문자열 내 <code>&lt;defs&gt;</code> 필터(밝기+드롭섀도우) 주입 → iOS·Android·데스크톱 모두 동일한 밝기 효과 구현
       </div>
+
       <br></br>
+
       <h3>[구현 효과]</h3>
       <ul>
         <li>SVG 내부 요소 완전 제어 → 클릭, 애니메이션, CSS 효과 자유자재</li>
         <li>pan/zoom 안정화 → 컨테이너 밖 노출 차단, 미니맵으로 빠른 위치 파악</li>
         <li>크로스 브라우저 호환성 확보 → 데스크톱·모바일 모두 일관된 UX</li>
       </ul>
+
       <br></br>
+
       <h3>[참고 링크]</h3>
       <div className="conseat-content__link">
         <img

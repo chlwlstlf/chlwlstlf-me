@@ -44,6 +44,8 @@ const ErrorHandlingContent = () => {
         />
       </div>
 
+      <br></br>
+
       <div className="corea-content-detail">
         <strong>POST, PUT, DELETE 요청</strong>
         <br></br>

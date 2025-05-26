@@ -19,6 +19,7 @@ export interface ProjectData {
   team: string;
   contribution: string;
   role?: string;
+  techSelectionReason?: string;
   skills: string[];
   links: { label: string; href: string }[];
   description: React.ReactNode;
@@ -35,7 +36,8 @@ export const PROJECTS: ProjectData[] = [
     period: "2025.03 ~ 진행중",
     team: "PM1 · 디자이너1 · Frontend2 · Backend2",
     contribution: "20%",
-    role: "인터랙티브 SVG 좌석 맵 기능, React Query 모듈화, 공통 컴포넌트·커스텀 훅, Metadata 관리",
+    role: "인터랙티브 SVG 좌석 맵 구현, React Query 모듈화, 공통 컴포넌트·커스텀 훅 개발, Metadata 관리",
+    techSelectionReason: "사용자 유입 극대화를 위해 빠른 초기 로딩과 SEO 최적화가 가능한 Next.js 도입",
     skills: ["Next.js", "TypeScript", "SCSS", "TanStack Query"],
     links: [
       { label: "Demo", href: "https://concertseat.site" },
@@ -54,7 +56,7 @@ export const PROJECTS: ProjectData[] = [
     period: "2024.07 ~ 2025.03",
     team: "Frontend3 · Backend4",
     contribution: "20%",
-    role: "깃허브 OAuth 로그인·토큰 재발급, 인증·오프라인 에러 핸들링 시스템, 성능 최적화, 웹 접근성 강화",
+    role: "깃허브 OAuth 로그인·토큰 재발급, 인증·오프라인 에러 핸들링 시스템, 방 생성·수정 페이지 개발",
     skills: ["React", "TypeScript", "Storybook", "Jest", "TanStack Query", "styled-components", "MSW"],
     links: [
       { label: "Demo", href: "https://code-review-area.com" },

@@ -13,6 +13,16 @@ const CoreaEtcContent = () => {
 
       <br></br>
 
+      <h3>[반응형 유틸 도입]</h3>
+      <ul>
+        <li>
+          프로젝트 전역에서 반복되던 <code>@media</code> 문을 styled-components 미디어쿼리 유틸로 통합
+        </li>
+        <li>브레이크포인트 변경 한 곳에서 관리, CSS 가독성·유지보수성 ↑</li>
+      </ul>
+
+      <br></br>
+
       <h3>[성능 최적화]</h3>
       <div className="corea-content-detail">
         <strong>Lighthouse 49점 → 96점, LCP 3.1s → 1.1s</strong>
@@ -27,16 +37,6 @@ const CoreaEtcContent = () => {
       <h3>[웹 접근성 개선]</h3>
       <ul>
         <li>ARIA 속성 추가 및 Screen Reader 지원 향상</li>
-      </ul>
-
-      <br></br>
-
-      <h3>[반응형 유틸 도입]</h3>
-      <ul>
-        <li>
-          프로젝트 전역에서 반복되던 <code>@media</code> 문을 styled-components 미디어쿼리 유틸로 통합
-        </li>
-        <li>브레이크포인트 변경 한 곳에서 관리, CSS 가독성·유지보수성 ↑</li>
       </ul>
     </div>
   );
