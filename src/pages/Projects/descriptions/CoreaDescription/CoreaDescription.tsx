@@ -10,9 +10,9 @@ import "./CoreaDescription.css";
 const tabs = [
   { label: "화면 이미지", Component: CoreaScreenContent },
   { label: "1. 토큰 재발급 구조 설계", Component: TokenRefreshContent },
-  { label: "2. 블러 처리 UI", Component: BlurUIContent },
-  { label: "3. 전역 에러 핸들링", Component: ErrorHandlingContent },
-  { label: "4. 네트워크 에러 처리", Component: NetworkErrorContent },
+  { label: "2. 전역 에러 핸들링", Component: ErrorHandlingContent },
+  { label: "3. 네트워크 에러 처리", Component: NetworkErrorContent },
+  { label: "4. 블러 처리 UI", Component: BlurUIContent },
   { label: "5. 그 외", Component: CoreaEtcContent },
 ];
 

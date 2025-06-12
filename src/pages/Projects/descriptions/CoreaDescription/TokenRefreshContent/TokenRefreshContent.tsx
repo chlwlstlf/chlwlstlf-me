@@ -8,11 +8,11 @@ const TokenRefreshContent = () => {
     <div className="corea-content">
       <h3>[문제점]</h3>
       <div className="corea-content-detail">
-        ※ 토큰 갱신 API 요청 함수에 <code>await new Promise((resolve) ={">"} setTimeout(resolve, 3000));</code> 코드를 추가하여 Race Condition 이슈가 없는지 확인
+        ※ 토큰 갱신 API 요청 함수에 <code>await new Promise((resolve) ={">"} setTimeout(resolve, 3000));</code> 코드를 추가하여 중복 요청 이슈가 없는지 확인
         <br></br>
-        Access Token이 만료된 상태에서 여러 API 요청이 거의 동시에 발생할 때, 각각의 요청이 독립적으로 토큰 갱신 API를 호출하여 <strong>Race Condition</strong>이 일어나고, 불필요한 중복 요청이 발생
+        Access Token이 만료된 상태에서 여러 API 요청이 거의 동시에 발생할 때, 각각의 요청이 독립적으로 토큰 갱신 API를 호출하여 <strong>불필요한 중복 요청이 발생</strong>
         <details>
-          <summary className="corea-content-details-summary">🚨 Race Condition 발생 예시 (동시 5건 요청 → 갱신 API 5회 호출)</summary>
+          <summary className="corea-content-details-summary">🚨 중복 요청 발생 예시 (동시 5건 요청 → 갱신 API 5회 호출)</summary>
           <img
             src={refreshToken1}
             alt="리프레시 토큰 이전 화면"

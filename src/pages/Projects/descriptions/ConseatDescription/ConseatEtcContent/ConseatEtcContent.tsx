@@ -3,6 +3,16 @@ import React from "react";
 const ConseatEtcContent = () => {
   return (
     <div className="conseat-content">
+      <h3>[Sentry 기반 에러 알림 체계 개선]</h3>
+      <ul>
+        <li>Sentry Discord 알림 기능이 유료 제한된 상황에서 Next.js serverless function으로 Webhook endpoint 구현, Discord 운영 알림 체계 직접 구성해 비용 없이 유지</li>
+        <li>
+          Sentry <code>setTag</code>로 API 정보, 환경 정보를 tagging하고 알림 메시지에 포함, 소스맵 적용으로 오류 맥락과 위치 파악 정확도 개선
+        </li>
+      </ul>
+
+      <br />
+
       <h3>[공통 API 설계]</h3>
       <ul>
         <li>

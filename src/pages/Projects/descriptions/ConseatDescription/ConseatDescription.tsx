@@ -9,9 +9,9 @@ import ConseatEtcContent from "./ConseatEtcContent/ConseatEtcContent";
 // 탭 설정 배열
 const tabs = [
   { label: "화면 이미지", Component: ConseatScreenContent },
-  { label: "1. SVG 좌석 맵 구현", Component: SVGMapContent },
-  { label: "2. 리뷰 작성 UX 개선", Component: ReviewPageContent },
-  { label: "3. Dropdown 통합 설계", Component: DropdownContent },
+  { label: "1. Dropdown 통합 설계", Component: DropdownContent },
+  { label: "2. SVG 좌석 맵 구현", Component: SVGMapContent },
+  { label: "3. 리뷰 작성 UX 개선", Component: ReviewPageContent },
   { label: "4. 그 외", Component: ConseatEtcContent },
 ];
 

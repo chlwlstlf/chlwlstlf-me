@@ -27,25 +27,6 @@ export interface ProjectData {
 
 export const PROJECTS: ProjectData[] = [
   {
-    id: "conseat",
-    logo: conseatLogo,
-    thumbnail: conseatThumb,
-    title: "콘시트 (CON:SEAT)",
-    subtitle: "콘서트 자리별 시야 확인 서비스",
-    introduction: "K-POP 팬들을 위한 콘서트 자리별 시야 확인 서비스",
-    period: "2025.03 ~ 진행중",
-    team: "PM1 · 디자이너1 · Frontend2 · Backend2",
-    contribution: "20%",
-    role: "인터랙티브 SVG 좌석 맵 구현, React Query 모듈화, 공통 컴포넌트·커스텀 훅 개발, Metadata 관리",
-    techSelectionReason: "사용자 유입 극대화를 위해 빠른 초기 로딩과 SEO 최적화가 가능한 Next.js 도입",
-    skills: ["Next.js", "TypeScript", "SCSS", "TanStack Query"],
-    links: [
-      { label: "Demo", href: "https://concertseat.site" },
-      { label: "GitHub", href: "https://github.com/ConSeat/frontend" },
-    ],
-    description: <ConseatDescription />,
-  },
-  {
     id: "corea",
     logo: coreaLogo,
     thumbnail: coreaThumb,
@@ -70,5 +51,24 @@ export const PROJECTS: ProjectData[] = [
       },
     ],
     description: <CoreaDescription />,
+  },
+  {
+    id: "conseat",
+    logo: conseatLogo,
+    thumbnail: conseatThumb,
+    title: "콘시트 (CON:SEAT)",
+    subtitle: "콘서트 자리별 시야 확인 서비스",
+    introduction: "K-POP 팬들을 위한 콘서트 자리별 시야 확인 서비스",
+    period: "2025.03 ~ 진행중",
+    team: "PM1 · 디자이너1 · Frontend2 · Backend2",
+    contribution: "20%",
+    role: "인터랙티브 SVG 좌석 맵 구현, React Query 모듈화, 공통 컴포넌트·커스텀 훅 개발, 에러 트래킹 시스템 구축, Metadata 관리",
+    techSelectionReason: "사용자 유입 극대화를 위해 빠른 초기 로딩과 SEO 최적화가 가능한 Next.js 도입",
+    skills: ["Next.js", "TypeScript", "SCSS", "TanStack Query"],
+    links: [
+      { label: "Demo", href: "https://concertseat.site" },
+      { label: "GitHub", href: "https://github.com/ConSeat/frontend" },
+    ],
+    description: <ConseatDescription />,
   },
 ];
