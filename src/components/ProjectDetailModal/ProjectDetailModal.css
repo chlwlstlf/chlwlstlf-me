@@ -1,18 +1,19 @@
 /* 모달 네모 박스 */
 .detail-modal-content {
-  width: 90vw;
-  height: 90vh;
-  padding: 2rem;
+  width: 90vw !important;
+  max-width: 1200px !important;
+  max-height: 90vh !important;
+  padding: 2rem !important;
   overflow: hidden;
 }
 
 /* 모바일에서 풀스크린으로 */
 @media (max-width: 768px) {
   .detail-modal-content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    border-radius: 0;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    padding: 1rem !important;
+    border-radius: 0 !important;
   }
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import github from "../../../../../assets/Github.svg";
 
 const ConseatEtcContent = () => {
   return (
@@ -10,6 +10,21 @@ const ConseatEtcContent = () => {
           Sentry <code>setTag</code>로 API 정보, 환경 정보를 tagging하고 알림 메시지에 포함, 소스맵 적용으로 오류 맥락과 위치 파악 정확도 개선
         </li>
       </ul>
+      <div className="conseat-content__link">
+        <img
+          src={github}
+          alt="GitHub 로고"
+          width="20"
+          height="20"
+        />
+        <a
+          href="https://github.com/ConSeat/frontend/pull/193"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          [feat] GA, Sentry 추가(#192) #193
+        </a>
+      </div>
 
       <br />
 
