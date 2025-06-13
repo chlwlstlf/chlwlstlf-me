@@ -2,7 +2,7 @@
 .detail-modal-content {
   width: 90vw !important;
   max-width: 1200px !important;
-  max-height: 90vh !important;
+  height: 90vh !important;
   padding: 2rem !important;
   overflow: hidden;
 }
@@ -10,8 +10,8 @@
 /* 모바일에서 풀스크린으로 */
 @media (max-width: 768px) {
   .detail-modal-content {
-    max-width: 100vw !important;
-    max-height: 100vh !important;
+    width: 100vw !important;
+    height: 100vh !important;
     padding: 1rem !important;
     border-radius: 0 !important;
   }
